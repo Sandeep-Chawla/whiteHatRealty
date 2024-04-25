@@ -53,10 +53,13 @@
         .preLoader {
             color: white;
             background-color: rgb(46, 45, 45);
-            position: relative;
+            position: fixed;
             display: flex;
+            top: 0;
+            left: 0;
             justify-content: center;
             height: 100vh;
+            width: 100%;
             overflow: hidden;
             padding: 100px 0 0;
             font-family: "Space Grotesk", sans-serif;
@@ -64,6 +67,7 @@
             font-weight: 400;
             font-style: normal;
             overflow: hidden;
+            z-index: 999;
         }
 
         .postLoader {
@@ -275,7 +279,7 @@
             top: 0;
             width: 90vh;
             z-index: 2;
-            height: 100vh;
+            height: 0vh;
             transition: height 0.3s ease;
             overflow: hidden;
         }
@@ -474,6 +478,59 @@
         .background3 {
             background: #1a5577;
         }
+        .btnCustom {
+            z-index: 1;
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.btnCustom::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc506;
+  transition: 0.5s ease;
+}
+
+.btnCustom:hover {
+  color: #1e1e2b;
+  transition-delay: 0.5s;
+}
+
+.btnCustom:hover::before {
+  width: 100%;
+}
+
+.btnCustom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btnCustom:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+.margin{
+    margin-top: 30px;
+}
     </style>
 </head>
 
@@ -488,6 +545,7 @@
                 <div class="side right"></div>
                 <div class="side front"></div>
             </div>
+            <div class="h1">Whitehat Realty</div>
         </div>
     </div>
     <div class="postLoader">
@@ -594,7 +652,7 @@
                 </section>
                 <section id="A">
                     <div>
-                        <img src="{{url('assets/images/i1.png')}}">
+                        <img src="{{url('assets/images/a1.png')}}">
                     </div>
                     <div class="content">
                         <span class="seven-headers">Adaptability:</span>
@@ -784,14 +842,11 @@
                                 <input type="email" class="form-control inputfield" id="email" placeholder="Email ID"
                                     name="email">
                             </div>
-                            <div class="">
-                                <span class="material-symbols-outlined icon2">
-                                    comment
-                                </span>
+                            <div class="margin">
                                 <textarea name="message" id="message" cols="85" rows="5" placeholder="Message"
-                                    class="form-control inputfield"></textarea>
+                                    class="form-control"></textarea>
                             </div><br>
-                            <button class="btn btn-primary">Submit</button>
+                            <button class="btnCustom">Submit</button>
                         </form>
 
                     </div>
@@ -802,6 +857,7 @@
     <script>
         $(window).on("load", function () {
             $('.preLoader').delay(100).fadeOut("slow");
+
         });
         $(document).on("scroll", function () {
             var pixels = $(document).scrollTop();
