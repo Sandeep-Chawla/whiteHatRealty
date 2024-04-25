@@ -1,0 +1,61 @@
+
+.inputs{
+    outline: none!important;
+    box-shadow: none!important;
+    padding-left: 40px!important;
+    border:2px solid #bfbfbf;
+}
+
+.loginPage{
+    height: 100vh;
+    padding: 20vh 0;
+    background: #e6e6e6;
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.loginBtn{
+    background: #f09d03;
+    color: #fff;
+}
+.loginBtn:hover{
+    background: #f09d03;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 5px 3px 8px;
+    transition: 1s all;
+}
+
+form label{
+    margin-bottom: .1rem!important;
+    font-size: 14px!important;
+    font-weight: 500;
+}
+
+.input-div{
+    display: flex;
+}
+
+.loginEye{
+    position: relative;
+    left: -15px;
+    margin-left: -15px;
+    top: 10px;
+}
+
+.loginLock,.loginUser{
+    position: relative;
+    right: -15px;
+    margin-right: -15px;
+    top: 10px;
+}
+
+.loginHeader{
+    background-color: #e6e6e694;
+}
+
+.loginBody{
+    background-color: #f1f0f094;
+    padding: 30px;
+}
