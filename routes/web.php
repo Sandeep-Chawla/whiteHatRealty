@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\admin\AuthController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\SendMailController;
 
 Route::group(['prefix' => '7439','middleware' => ['admin','PreventBackPage']], function(){
 
@@ -19,3 +20,4 @@ Route::group(['prefix' => '7439','middleware' => ['admin','PreventBackPage']], f
 
 
 Route::get('coming-soon',[DashboardController::class,'comingSoon']);
+Route::post('contact-mail',[SendMailController::class,'SendContactMail'])->name('contact-mail');

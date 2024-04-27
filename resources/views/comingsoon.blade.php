@@ -549,7 +549,7 @@
         </div>
     </div>
     <div class="postLoader">
-        <div class="main-div">
+        <div class="main-div mobile">
             <div class="ripple-background">
                 <div class="circle medium shade2"></div>
                 <div class="circle large shade3"></div>
@@ -819,7 +819,8 @@
                         <h1 class="text-center text-light">Contact Us</h1>
 
 
-                        <form class="p-1 background3" action="" id="#myForm">
+                        <form class="p-1 background3" action="{{route('contact-mail')}}" method="POST" id="#myForm">
+                            @csrf
                             <div class="">
                                 <span class="material-symbols-outlined icon2">
                                     person
