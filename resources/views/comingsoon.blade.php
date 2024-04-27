@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="{{url('assets/libraries/css/bootstrap.min.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="{{url('assets/libraries/js/bootstrap.min.js')}}"></script>
     <link rel="stylesheet" href="{{url('assets/customs/css/style.css')}}">
     <script src="{{url('assets/libraries/js/jquery.js')}}"></script>
     <script src="{{url('assets/libraries/js/fontsawesome.js')}}"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 
     <style>
@@ -37,6 +35,20 @@
                 --cube-size: 100px;
                 --text-size: 20px;
                 --border-size: 15px;
+            }
+            .glass {
+                margin: 1rem;
+                padding: 1rem 0;
+            }
+
+            .px-5 {
+                padding: 0 !important;
+            }
+
+            .glass p {
+                margin: 0;
+                line-height: 1;
+
             }
         }
 
@@ -243,15 +255,15 @@
             width: 100%;
         }
 
-        .sections{
+        .sections {
             width: 80%;
         }
+
         .sections section {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
             padding: 15px 15px 15px 40px;
             text-align: justify;
             margin: 20px 0;
@@ -259,8 +271,6 @@
 
         section img {
             width: 70px;
-            padding: 10px;
-
             position: relative;
         }
 
@@ -285,7 +295,7 @@
             transition: height 0.3s ease;
             overflow: hidden;
         }
-
+        
         .fixed-content img {
             display: block;
             text-align: center;
@@ -375,9 +385,8 @@
 
 
         .seven-headers {
-
+            color: white;
             font-size: 1.5rem;
-            text-transform: uppercase;
         }
 
 
@@ -480,59 +489,134 @@
         .background3 {
             background: #1a5577;
         }
+
         .btnCustom {
             z-index: 1;
-  font-size: 17px;
-  background: transparent;
-  border: none;
-  padding: 1em 1.5em;
-  color: #ffedd3;
-  text-transform: uppercase;
-  position: relative;
-  transition: 0.5s ease;
-  cursor: pointer;
-}
+            font-size: 17px;
+            background: transparent;
+            border: none;
+            padding: 1em 1.5em;
+            color: #ffedd3;
+            text-transform: uppercase;
+            position: relative;
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
 
-.btnCustom::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background-color: #ffc506;
-  transition: 0.5s ease;
-}
+        .btnCustom::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background-color: #ffc506;
+            transition: 0.5s ease;
+        }
 
-.btnCustom:hover {
-  color: #1e1e2b;
-  transition-delay: 0.5s;
-}
+        .btnCustom:hover {
+            color: #1e1e2b;
+            transition-delay: 0.5s;
+        }
 
-.btnCustom:hover::before {
-  width: 100%;
-}
+        .btnCustom:hover::before {
+            width: 100%;
+        }
 
-.btnCustom::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 0;
-  width: 100%;
-  background-color: #ffc506;
-  transition: 0.4s ease;
-  z-index: -1;
-}
+        .btnCustom::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 0;
+            width: 100%;
+            background-color: #ffc506;
+            transition: 0.4s ease;
+            z-index: -1;
+        }
 
-.btnCustom:hover::after {
-  height: 100%;
-  transition-delay: 0.4s;
-  color: aliceblue;
-}
-.margin{
-    margin-top: 30px;
-}
+        .btnCustom:hover::after {
+            height: 100%;
+            transition-delay: 0.4s;
+            color: aliceblue;
+        }
+
+        .margin {
+            margin-top: 30px;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(2.5px);
+            -webkit-backdrop-filter: blur(2.5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        #coming{
+            position: relative;
+            padding: 1rem 0;
+        }
+        .bg-img{
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .bg-img{
+                display: block;
+                width: 100%;
+            }
+            .main-div {
+                flex-direction: column;
+            }
+
+            .fixed-content {
+                bottom: 0;
+                display: flex;
+                width: 0;
+                height: auto !important;
+                background-color: #1b5577;
+            transition: width 0.5s ease;
+
+            }
+            .fixed-content div{
+                width: 12.5vw;
+            }
+            .fixed-content img{
+                width: 12.5vw;
+            }
+
+            .seven-headers {
+                font-size: 3rem;
+            }
+
+            .sections {
+                width: 100%;
+            }
+
+            .sections section {
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .content {
+                width: 50%;
+                font-size: 3rem;
+                line-height: 1;
+            }
+
+            section img {
+                width: 200px;
+            }
+            .glass{
+                margin: 2rem 4rem;
+            padding: 3rem 0rem;
+            }
+            #coming {
+            clip-path: polygon(0 0, 64% 0, 54% 100%, 0% 100%);
+            position: absolute;
+        }
+        }
     </style>
 </head>
 
@@ -551,18 +635,18 @@
         </div>
     </div>
     <div class="postLoader">
-        <div class="main-div mobile">
+        <div class="main-div">
             <div class="ripple-background">
                 <div class="circle medium shade2"></div>
                 <div class="circle large shade3"></div>
             </div>
             <div class="sections">
                 <section id="W">
-                    <div>
+                    <div class="d-flex align-items-end ">
                         <img src="{{url('assets/images/w1.png')}}">
+                        <span class="seven-headers">isdom:</span>
                     </div>
                     <div class="content">
-                        <span class="seven-headers"> Wisdom:</span>
                         <p>
                             We navigate with wisdom, leveraging our knowledge and experience to steer through the twists
                             and
@@ -572,11 +656,11 @@
                     </div>
                 </section>
                 <section id="H1">
-                    <div>
+                    <div class="d-flex align-items-end ">
                         <img src="{{url('assets/images/h1.png')}}">
+                        <span class="seven-headers">onesty:</span>
                     </div>
                     <div class="content">
-                        <span class="seven-headers">Honesty:</span>
                         <p>
                             Transparency is our cornerstone in the real estate sphere. We believe in open dialogue and
                             integrity in
@@ -586,11 +670,11 @@
                     </div>
                 </section>
                 <section id="I">
-                    <div>
+                    <div class="d-flex align-items-end ">
                         <img src="{{url('assets/images/i1.png')}}">
+                        <span class="seven-headers">nnovation:</span>
                     </div>
                     <div class="content">
-                        <span class="seven-headers">Innovation:</span>
                         <p>
                             At the heart of our real estate philosophy lies innovation. We embrace cutting-edge
                             technologies
@@ -606,11 +690,11 @@
                     </div>
                 </section>
                 <section id="T1">
-                    <div>
+                    <div class="d-flex align-items-end ">
                         <img src="{{url('assets/images/t1.png')}}">
+                        <span class="seven-headers">eamwork:</span>
                     </div>
                     <div class="content">
-                        <span class="seven-headers">Teamwork:</span>
                         <p>
                             Real estate is a team sport, and we thrive on collaboration.
                             Each member of our team brings a unique set of skills to the table, creating a tapestry of
@@ -621,11 +705,11 @@
                     </div>
                 </section>
                 <section id="E">
-                    <div>
+                    <div class="d-flex align-items-end ">
                         <img src="{{url('assets/images/e1.png')}}">
+                        <span class="seven-headers">xcellence:</span>
                     </div>
                     <div class="content">
-                        <span class="seven-headers"> Excellence:</span>
                         <p>
                             We set the bar high and strive for excellence in every aspect of our business,
                             from impeccable client service to stellar property representation. It's not just about
@@ -636,11 +720,11 @@
                     </div>
                 </section>
                 <section id="H2">
-                    <div>
+                    <div class="d-flex align-items-end ">
                         <img src="{{url('assets/images/sign1.png')}}">
+                        <span class="seven-headers">umanity:</span>
                     </div>
                     <div class="content">
-                        <span class="seven-headers"> Humanity:</span>
                         <p>
                             Beyond the bricks and mortar, real estate is about people.
                             We understand the emotional journey involved in property transactions and approach each
@@ -653,11 +737,11 @@
                     </div>
                 </section>
                 <section id="A">
-                    <div>
+                    <div class="d-flex align-items-end ">
                         <img src="{{url('assets/images/a1.png')}}">
+                        <span class="seven-headers">daptability:</span>
                     </div>
                     <div class="content">
-                        <span class="seven-headers">Adaptability:</span>
                         <p>
                             In the ever-shifting landscape of real estate, adaptability is key.
                             We embrace change as an opportunity for growth, constantly evolving to meet the demands of
@@ -670,11 +754,11 @@
                     </div>
                 </section>
                 <section id="T2">
-                    <div>
+                    <div class="d-flex align-items-end ">
                         <img src="{{url('assets/images/t1.png')}}">
+                        <span class="seven-headers">rustworthiness:</span>
                     </div>
                     <div class="content">
-                        <span class="seven-headers"> Trustworthiness:</span>
                         <p>
                             In real estate, trust is everything.
                             We honor our commitments and uphold our promises,
@@ -687,110 +771,63 @@
             </div>
 
             <div class="fixed-content">
-                <img src="{{url('assets/images/w1.png')}}">
-                <img src="{{url('assets/images/h1.png')}}">
-                <img src="{{url('assets/images/i1.png')}}">
-                <img src="{{url('assets/images/t1.png')}}">
-                <img src="{{url('assets/images/e1.png')}}">
-                <img src="{{url('assets/images/sign1.png')}}">
-                <img src="{{url('assets/images/a1.png')}}">
-                <img src="{{url('assets/images/t1.png')}}">
+                <div><img src="{{url('assets/images/w1.png')}}"></div>
+                <div><img src="{{url('assets/images/h1.png')}}"></div>
+                <div><img src="{{url('assets/images/i1.png')}}"></div>
+                <div><img src="{{url('assets/images/t1.png')}}"></div>
+                <div><img src="{{url('assets/images/e1.png')}}"></div>
+                <div><img src="{{url('assets/images/sign1.png')}}"></div>
+                <div><img src="{{url('assets/images/a1.png')}}"></div>
+                <div><img src="{{url('assets/images/t1.png')}}"></div>
             </div>
         </div>
         <section id="slider" class="d-grid align-items-center gap-3 overflow-scroll">
             <div id="slideTrack" class="slide">
                 <div>
-                    <iframe src="https://www.youtube.com/embed/NBcXxd5w7mU?si=1TKnWLjFQMMWFjnU"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <img class="img"
-                        src="https://images.unsplash.com/photo-1713184355726-d3a31d822fcc?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="">
+                    <iframe src="https://www.youtube.com/embed/NBcXxd5w7mU?si=1TKnWLjFQMMWFjnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <img class="img" src="https://images.unsplash.com/photo-1713184355726-d3a31d822fcc?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/rbg6pFERuWA?si=oXn55ZcYZudVUTK5"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/rbg6pFERuWA?si=oXn55ZcYZudVUTK5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/xGSQRJ98nJA?si=pxBKzDiHLy5WgkEG"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/xGSQRJ98nJA?si=pxBKzDiHLy5WgkEG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/mrReXTx2-_8?si=okpvSZJ0EMQgUzw0"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/mrReXTx2-_8?si=okpvSZJ0EMQgUzw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/rOdoIajoU5U?si=vEw2fd-_gxTJ7joO"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/rOdoIajoU5U?si=vEw2fd-_gxTJ7joO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/UjcRtdG3RiQ?si=WRltu0G0R8YLPzBF"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/UjcRtdG3RiQ?si=WRltu0G0R8YLPzBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/DvCbI_DQ1P0?si=7FxTJ3h0gF83t25j"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/DvCbI_DQ1P0?si=7FxTJ3h0gF83t25j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/u0mSrq_entE?si=vFgjSf5wE3jcuTQo"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/u0mSrq_entE?si=vFgjSf5wE3jcuTQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/w8gr4KqqCyY?si=HPHSsUsHlTdgHGKM"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/w8gr4KqqCyY?si=HPHSsUsHlTdgHGKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/SlTS4T5ZuAY?si=OwKaMHGVIJS1NgWl"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/SlTS4T5ZuAY?si=OwKaMHGVIJS1NgWl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/e6mWswP4fpk?si=dY_G9_FZr9ShNyB5"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/e6mWswP4fpk?si=dY_G9_FZr9ShNyB5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/Yq47X1eux8o?si=pVjACAhB4l7baSAx"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Yq47X1eux8o?si=pVjACAhB4l7baSAx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/vvn74hPyoKA?si=3B2CsJ4Bknu_SI5G"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/vvn74hPyoKA?si=3B2CsJ4Bknu_SI5G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/eXkZCJ31ylI?si=m0zYvpShlQC61JwC"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/eXkZCJ31ylI?si=m0zYvpShlQC61JwC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>
-                    <iframe src="https://www.youtube.com/embed/u0mSrq_entE?si=2PE-USHaSV6Zm5Qx"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/u0mSrq_entE?si=2PE-USHaSV6Zm5Qx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -821,33 +858,28 @@
                         <h1 class="text-center text-light">Contact Us</h1>
 
 
-                        <form class="p-1 background3" action="{{route('contact-mail')}}" method="POST" id="#myForm">
-                            @csrf
+                        <form class="p-1 background3" action="" id="#myForm">
                             <div class="">
                                 <span class="material-symbols-outlined icon2">
                                     person
                                 </span>
-                                <input type="name" class="form-control inputfield" id="name" placeholder="Name"
-                                    name="name">
+                                <input type="name" class="form-control inputfield" id="name" placeholder="Name" name="name">
 
                             </div>
                             <div class="">
                                 <span class="material-symbols-outlined icon2">
                                     call
                                 </span>
-                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile"
-                                    name="mobile">
+                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile" name="mobile">
                             </div>
                             <div class="">
                                 <span class="material-symbols-outlined icon2">
                                     mail
                                 </span>
-                                <input type="email" class="form-control inputfield" id="email" placeholder="Email ID"
-                                    name="email">
+                                <input type="email" class="form-control inputfield" id="email" placeholder="Email ID" name="email">
                             </div>
                             <div class="margin">
-                                <textarea name="message" id="message" cols="85" rows="5" placeholder="Message"
-                                    class="form-control"></textarea>
+                                <textarea name="message" id="message" cols="5" rows="5" placeholder="Message" class="form-control"></textarea>
                             </div><br>
                             <button class="btnCustom">Submit</button>
                         </form>
@@ -856,17 +888,55 @@
                 </div>
             </div>
         </section>
+        <div class="position-relative ">
+            <img class="bg-img" src="{{url('assets/images/coming.jpeg')}}" alt="" class="w-100 h-100 ">
+            <div id="coming" class="top-0 w-100 h-100 bg-dark ">
+                <div class="col-sm-5 p-3 glass">
+                    <div class="text-light h1 px-5">Our Website is coming soon</div>
+                    <p class="text-light px-5">We are working hard to finish the development of this site. Contact Us to know more Details</p>
+
+
+                    <form class="p-1 px-5" action="" id="#myForm">
+                        <div class="">
+                            <span class="material-symbols-outlined icon2">
+                                person
+                            </span>
+                            <input type="name" class="form-control inputfield" id="name" placeholder="Name" name="name">
+
+                        </div>
+                        <div class="">
+                            <span class="material-symbols-outlined icon2">
+                                call
+                            </span>
+                            <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile" name="mobile">
+                        </div>
+                        <div class="">
+                            <span class="material-symbols-outlined icon2">
+                                mail
+                            </span>
+                            <input type="email" class="form-control inputfield" id="email" placeholder="Email ID" name="email">
+                        </div>
+                        <div class="margin">
+                            <textarea name="message" id="message" cols="85" rows="5" placeholder="Message" class="form-control"></textarea>
+                        </div><br>
+                        <button class="btnCustom">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
     </div>
+
     <script>
-        $(window).on("load", function () {
+        $(window).on("load", function() {
             $('.preLoader').delay(100).fadeOut("slow");
 
         });
-        $(document).on("scroll", function () {
+        $(document).on("scroll", function() {
             var pixels = $(document).scrollTop();
             var windowHeight = $(window).height();
 
-            $(".sections section").each(function () {
+            $(".sections section").each(function() {
                 var sectionTop = $(this).offset().top;
                 var sectionHeight = $(this).outerHeight();
                 var sectionId = $(this).attr('id');
@@ -879,7 +949,12 @@
             });
             var pageHeight = $(document).height() - $(window).height();
             var progress = Math.ceil(100 * (pixels / pageHeight / 12.5) + 1) * 12.5;
-            $(".fixed-content").css("height", progress + "vh");
+            if($(document).width()>768){
+                $(".fixed-content").css("width", progress + "vw");
+            }
+            else{
+                $(".fixed-content").css("height", progress + "vh");
+            }
         });
 
 
@@ -920,11 +995,11 @@
             }
         }
 
-        slide.on("mouseenter", function () {
+        slide.on("mouseenter", function() {
             pauseAnimation();
         });
 
-        slide.on("mouseleave", function () {
+        slide.on("mouseleave", function() {
             resumeAnimation();
         });
 
