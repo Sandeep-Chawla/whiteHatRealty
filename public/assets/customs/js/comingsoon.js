@@ -19,7 +19,12 @@ $(document).on("scroll", function () {
     });
     var pageHeight = $(document).height() - $(window).height();
     var progress = Math.ceil(100 * (pixels / pageHeight / 12.5) + 1) * 12.5;
-    $(".fixed-content").css("height", progress + "vh");
+    if($(document).width()>768){
+                $(".fixed-content").css("width", progress + "vw");
+            }
+            else{
+                $(".fixed-content").css("height", progress + "vh");
+            }
 });
 
 
