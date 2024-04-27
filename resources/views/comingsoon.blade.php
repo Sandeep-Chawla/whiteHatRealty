@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="{{url('assets/libraries/css/bootstrap.min.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="{{url('assets/libraries/css/fonts.css')}}"
+        rel="stylesheet">
     <script src="{{url('assets/libraries/js/bootstrap.min.js')}}"></script>
     <link rel="stylesheet" href="{{url('assets/customs/css/style.css')}}">
     <script src="{{url('assets/libraries/js/jquery.js')}}"></script>
     <script src="{{url('assets/libraries/js/fontsawesome.js')}}"></script>
+    <script src="{{url('assets/libraries/js/particles.js')}}"></script>
+    <link rel="stylesheet" href="{{url('assets/customs/css/comingsoon.css')}}">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 
@@ -625,7 +629,7 @@
         <div class="background"></div>
         <div class="wrapper">
             <div class="cube">
-                <div class="bottom"> W</div>
+                <div class="bottom"></div>
                 <div class="side back"></div>
                 <div class="side left"></div>
                 <div class="side right"></div>
@@ -636,6 +640,7 @@
     </div>
     <div class="postLoader">
         <div class="main-div">
+        <div id="particles_effect" class="particles-effect"></div>
             <div class="ripple-background">
                 <div class="circle medium shade2"></div>
                 <div class="circle large shade3"></div>
@@ -858,7 +863,8 @@
                         <h1 class="text-center text-light">Contact Us</h1>
 
 
-                        <form class="p-1 background3" action="" id="#myForm">
+                        <form class="p-1 background3" action="{{route('contact-mail')}}" method="POST" id="myForm">
+                            @csrf
                             <div class="">
                                 <span class="material-symbols-outlined icon2">
                                     person
@@ -867,10 +873,13 @@
 
                             </div>
                             <div class="">
+                                <label for="mobile">
                                 <span class="material-symbols-outlined icon2">
                                     call
                                 </span>
-                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile" name="mobile">
+                                </label>
+                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile"
+                                    name="mobile">
                             </div>
                             <div class="">
                                 <span class="material-symbols-outlined icon2">
@@ -881,6 +890,9 @@
                             <div class="margin">
                                 <textarea name="message" id="message" cols="5" rows="5" placeholder="Message" class="form-control"></textarea>
                             </div><br>
+                        <div>
+                        
+                        </div>
                             <button class="btnCustom">Submit</button>
                         </form>
 
@@ -926,84 +938,7 @@
             </div>
         </div>
     </div>
-
-    <script>
-        $(window).on("load", function() {
-            $('.preLoader').delay(100).fadeOut("slow");
-
-        });
-        $(document).on("scroll", function() {
-            var pixels = $(document).scrollTop();
-            var windowHeight = $(window).height();
-
-            $(".sections section").each(function() {
-                var sectionTop = $(this).offset().top;
-                var sectionHeight = $(this).outerHeight();
-                var sectionId = $(this).attr('id');
-
-                if (pixels + windowHeight >= sectionTop && pixels <= sectionTop + sectionHeight) {
-                    $('#' + sectionId + ' img').addClass('moveInRight');
-                } else {
-                    $('#' + sectionId + ' img').removeClass('moveInRight');
-                }
-            });
-            var pageHeight = $(document).height() - $(window).height();
-            var progress = Math.ceil(100 * (pixels / pageHeight / 12.5) + 1) * 12.5;
-            if($(document).width()>768){
-                $(".fixed-content").css("width", progress + "vw");
-            }
-            else{
-                $(".fixed-content").css("height", progress + "vh");
-            }
-        });
-
-
-
-        var slide = $(".slide");
-        var currentPosition = 0;
-        var animationDuration = 60000; // 40 seconds in milliseconds
-
-        function startAnimation() {
-            slide.css({
-                "animation": "slide " + (animationDuration / 1000) + "s infinite",
-                "animation-play-state": "running"
-            });
-        }
-
-        function pauseAnimation() {
-            currentPosition = getCurrentPosition();
-            slide.css({
-                "animation-play-state": "paused"
-            });
-        }
-
-        function resumeAnimation() {
-            slide.css({
-                "animation": "slide " + (animationDuration / 1000) + "s infinite",
-                "animation-play-state": "running",
-                "animation-delay": "-" + (currentPosition / 360) + "s" // Adjust delay based on current position
-            });
-        }
-
-        function getCurrentPosition() {
-            var transformValue = slide.css("transform");
-            if (transformValue !== "none") {
-                var matrix = transformValue.match(/matrix.*\((.+)\)/)[1].split(', ');
-                return parseInt(matrix[4]); // Extract X translate value
-            } else {
-                return 0;
-            }
-        }
-
-        slide.on("mouseenter", function() {
-            pauseAnimation();
-        });
-
-        slide.on("mouseleave", function() {
-            resumeAnimation();
-        });
-
-        startAnimation();
+    <script src="{{url('assets/customs/js/comingsoon.js')}}">
     </script>
 </body>
 

@@ -10,11 +10,11 @@ class SendMailController extends Controller
 {
     public function SendContactMail(Request $request){
         $mailData = $this->validate($request,[
-            'name' => 'required|max:8',
+            'name' => 'required',
             'mobile' => 'required|numeric',
             'email' => 'required|email'
-         ]);
-
+        ]);
+        
         Mail::to($request->email)->send(new ContactMail($mailData));
         // Mail::to('')->send(new ContactMail($mailData));
 

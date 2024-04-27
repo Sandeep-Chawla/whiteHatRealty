@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            margin: 10% 0 !important;
+            padding: 0 !important;
+            background: #f3f3f3;
+            width: 100%;
+        }
+
+        .card-body {
+            width: 80%;
+            margin: auto;
+            padding: 5%;
+            background-color: #fff;
+            box-shadow: 2px 2px 2px #e3e3e3;
+        }
+
+        .name{
+            color:#1e5577;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <img src="https://t3.ftcdn.net/jpg/05/30/96/04/360_F_530960431_c8fPd3HansYvrSJ4fJxZqp9OhjQmYoll.jpg" alt=""
+                width="100%" height="150px" srcset="">
+            <h3>Hello <span class="name">{{$mailData['name']}}</span></h3>
+            <p>
+                Thank you for reaching out to us. Your inquiry has been successfully submitted, and we appreciate your
+                interest in our [product/service/company]. Our team is dedicated to providing exceptional customer
+                service and will get back to you as soon as possible.
+            </p>
+            <p>
+                Best regards,
+                <br>
+                White Hat Realty
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>

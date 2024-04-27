@@ -32,8 +32,8 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Mail from White Hat Realty')
-                    ->view('emails.queryform');
+        return $this->subject('In Response To Your Query')
+                    ->view('emails.queryform')->with('mailData', $this->mailData);;
     }
 
 }
