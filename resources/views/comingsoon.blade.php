@@ -531,17 +531,6 @@
 .margin{
     margin-top: 30px;
 }
-#coming{
-    clip-path: polygon(0 0, 64% 0, 54% 100%, 0% 100%);
-}
-.glass{
-    background: rgba( 255, 255, 255, 0.15 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 2.5px );
--webkit-backdrop-filter: blur( 2.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
     </style>
 </head>
 
@@ -865,49 +854,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
                 </div>
             </div>
         </section>
-        <div class="position-relative ">
-            <img src="{{url('assets/images/coming.jpeg')}}" alt="" class="w-100 h-100 ">
-            <div id="coming" class=" position-absolute top-0 w-100 h-100 bg-dark ">
-                <div class="col-sm-6 p-3">
-                    <div class="text-light h1">Our Website is coming soon</div>
-                    <p class="text-light">We are working hard to finish the development of this site. Contact Us to know more Details</p>
-
-
-                        <form class="p-1 px-5  glass" action="" id="#myForm">
-                            <div class="">
-                                <span class="material-symbols-outlined icon2">
-                                    person
-                                </span>
-                                <input type="name" class="form-control inputfield" id="name" placeholder="Name"
-                                    name="name">
-
-                            </div>
-                            <div class="">
-                                <span class="material-symbols-outlined icon2">
-                                    call
-                                </span>
-                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile"
-                                    name="mobile">
-                            </div>
-                            <div class="">
-                                <span class="material-symbols-outlined icon2">
-                                    mail
-                                </span>
-                                <input type="email" class="form-control inputfield" id="email" placeholder="Email ID"
-                                    name="email">
-                            </div>
-                            <div class="margin">
-                                <textarea name="message" id="message" cols="85" rows="5" placeholder="Message"
-                                    class="form-control"></textarea>
-                            </div><br>
-                            <button class="btnCustom">Submit</button>
-                        </form>
-
-                    </div>
-            </div>
-        </div>
     </div>
-
     <script>
         $(window).on("load", function () {
             $('.preLoader').delay(100).fadeOut("slow");
@@ -929,7 +876,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
                 }
             });
             var pageHeight = $(document).height() - $(window).height();
-            var progress = Math.ceil(100 * pixels / pageHeight / 12.5) * 12.5;
+            var progress = Math.ceil(100 * (pixels / pageHeight / 12.5) + 1) * 12.5;
             $(".fixed-content").css("height", progress + "vh");
         });
 
