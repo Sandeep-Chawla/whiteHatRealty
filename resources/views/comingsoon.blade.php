@@ -243,7 +243,9 @@
             width: 100%;
         }
 
-
+        .sections{
+            width: 80%;
+        }
         .sections section {
             height: 100vh;
             display: flex;
@@ -277,7 +279,7 @@
             position: sticky;
             right: 0;
             top: 0;
-            width: 90vh;
+            width: 20%;
             z-index: 2;
             height: 0vh;
             transition: height 0.3s ease;
@@ -928,7 +930,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
                 }
             });
             var pageHeight = $(document).height() - $(window).height();
-            var progress = Math.ceil(100 * pixels / pageHeight / 12.5) * 12.5;
+            var progress = Math.ceil(100 * (pixels / pageHeight / 12.5) + 1) * 12.5;
             $(".fixed-content").css("height", progress + "vh");
         });
 
