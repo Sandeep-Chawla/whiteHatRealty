@@ -16,6 +16,14 @@ Route::group(['prefix' => '7439','middleware' => ['admin','PreventBackPage']], f
     route::get('logout',[AuthController::class,'logout'])->name('logout');
 
     Route::get('dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
+
+    Route::group(['prefix' => 'organizations'],function(){
+        // GET METHODS
+        Route::get('',[OrganizationCaontroller::class,'index'])->name('organizations.index');
+
+        // POST METHODS
+        
+    });
 });
 
 
