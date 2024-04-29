@@ -560,6 +560,7 @@
         #coming {
             /* position: relative; */
             padding: 1rem 0;
+            top: 0;
         }
 
         .bg-img {
@@ -786,10 +787,6 @@
                     </div>
                 </section>
                 <section id="T1">
-                    <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">T</span>
-                        <span class="seven-headers">eamwork:</span>
-                    </div>
                     <div class="content">
                         <p>
                             Real estate is a team sport, and we thrive on collaboration.
@@ -798,6 +795,10 @@
                             that ensures
                             success in every endeavor.
                         </p>
+                    </div>
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">T</span>
+                        <span class="seven-headers">eamwork:</span>
                     </div>
                 </section>
                 <section id="E">
@@ -816,10 +817,6 @@
                     </div>
                 </section>
                 <section id="H2">
-                    <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">E</span>
-                        <span class="seven-headers">umanity:</span>
-                    </div>
                     <div class="content">
                         <p>
                             Beyond the bricks and mortar, real estate is about people.
@@ -830,6 +827,10 @@
                             Community is at the heart of what we do, and we're dedicated to making a positive impact
                             wherever we go.
                         </p>
+                    </div>
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">H</span>
+                        <span class="seven-headers">umanity:</span>
                     </div>
                 </section>
                 <section id="A">
@@ -850,10 +851,6 @@
                     </div>
                 </section>
                 <section id="T2">
-                    <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">T</span>
-                        <span class="seven-headers">rustworthiness:</span>
-                    </div>
                     <div class="content">
                         <p>
                             In real estate, trust is everything.
@@ -861,7 +858,10 @@
                             building a reputation for reliability and integrity that's as solid as the foundations we
                             represent.
                         </p>
-
+                    </div>
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">T</span>
+                        <span class="seven-headers">rustworthiness:</span>
                     </div>
                 </section>
             </div>
