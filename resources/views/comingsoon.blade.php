@@ -268,7 +268,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 15px 15px 15px 40px;
             margin: 20px 0;
         }
 
@@ -294,6 +293,7 @@
             top: 0;
             width: 20%;
             z-index: 2;
+            max-width: 100%;
             height: 0vh;
             transition: height 0.3s ease;
             overflow: hidden;
@@ -700,13 +700,27 @@
                 transform: rotateX(0);
             }
         }
-        #linesvg{
-            width:90%;
+
+        #linesvg {
+            width: 90%;
             position: absolute;
-            margin:auto;
-            top:30vh
+            margin: auto;
+            top: 30vh
         }
-        
+
+        .nav {
+            box-shadow: 0 0 10px rgba(0 0 0 / 20%);
+            width: 100%;
+            height: auto;
+            position: fixed;
+        }
+
+        .nav img {
+            margin: auto;
+            width: 1000px;
+            height: 300px;
+            object-fit: cover;
+        }
     </style>
 </head>
 
@@ -728,22 +742,25 @@
         </div>
     </div>
     <div class="postLoader">
-    <section class="content">
-  <div class="container">
-  <svg id="linesvg" viewBox="0 0 1223 5300" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <path id="motionPath" class="st0" d="M210.994,208.925 C207.012,398.508 975.711,667.75 977.384,820.923 985.409,1152.29 158.987,1014.341 158.987,1480.499 158.987,1674.154 1137.191,1953.692 1137.191,2147.375 1137.191,2615.326 171.635,2405.098 171.635,2844.808 171.635,3005.462 1156.995,3368.644 1156.995,3529.336 1156.995,4014.711 197.141,3655.338 197.141,4218.328 197.141,4735.529 1188.242,4341.104 1188.242,4858.324 " stroke="url('#gradient')" stroke-width="8" />
-      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#05a"/>
-      <stop offset="100%" stop-color="#0a5"/>
-    </linearGradient>
-      <image id="motionSVG" class="card-img" href="https://theservtech.com/hodler-gallery/wp-content/uploads/2022/10/black1.png" height="70" width="70" x="-500" y="-500" />
-    </svg>
-  </div>
+        <navbar class="nav">
+            <img src="{{url('assets/images/logo.png')}}" alt="" srcset="">
+        </navbar>
+        <section class="content">
+            <div class="container">
+                <svg id="linesvg" viewBox="0 0 1223 5300" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path id="motionPath" class="st0" d="M214.587,133.47 C210.605,323.045 975.71,681.403 977.383,834.576 985.408,1165.939 151.8,1046.671 151.8,1512.836 151.8,1706.49 928.793,1989.615 928.793,2183.305 928.793,2651.256 160.137,2446.057 160.137,2885.769 160.137,3046.423 952.908,3411.76 952.908,3572.452 952.908,4057.827 163.366,3661.804 163.366,4224.795 163.366,4741.996 813.844,4387.092 813.844,4904.315" stroke="url('#gradient')" stroke-width="8" />
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#05a" />
+                        <stop offset="100%" stop-color="#0a5" />
+                    </linearGradient>
+                    <image id="motionSVG" class="card-img" href="https://theservtech.com/hodler-gallery/wp-content/uploads/2022/10/black1.png" height="70" width="70" x="-500" y="-500" />
+                </svg>
+            </div>
 
-</section>
-<section></section>
+        </section>
+        <section></section>
         <div class="main-div">
-            <div id="particles_effect" class="particles-effect d-none"></div>
+            <div id="particles_effect" class="particles-effect"></div>
             <div class="ripple-background">
                 <div class="circle medium shade2"></div>
                 <div class="circle large shade3"></div>
@@ -1041,35 +1058,53 @@
     </div>
     <script src="{{url('assets/customs/js/comingsoon.js')}}">
     </script>
-<script src="{{url('assets/libraries/js/gsap.min.js')}}"></script>
-<script src="{{url('assets/libraries/js/scrolltrigger.min.js')}}"></script>
-<script src="{{url('assets/libraries/js/motion.min.js')}}"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js"></script>
+    <script src="{{url('assets/libraries/js/gsap.min.js')}}"></script>
+    <script src="{{url('assets/libraries/js/scrolltrigger.min.js')}}"></script>
+    <script src="{{url('assets/libraries/js/motion.min.js')}}"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
     <script>
         var animation;
 
-gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+        gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin, ScrollTrigger);
 
-gsap.set("#motionSVG", { scale: 0.7, autoAlpha: 1 });
+        // gsap.set("#motionSVG", { scale: 0.7, autoAlpha: 1 });
 
-animation = gsap.to("#motionSVG", {
-  scrollTrigger: {
-    trigger: "#motionPath",
-    start: "top 30%",
-    end: "bottom+=200px bottom",
-    scrub: 1,
-    markers: true
-  },
-  ease: "none",
-  motionPath: {
-    path: "#motionPath",
-    align: "#motionPath",
-    alignOrigin: [0.5, 1],
-    autoRotate: 90
-  }
-});
-// MotionPathHelper.create('#motionSVG');
+        // animation = gsap.to("#motionSVG", {
+        //   scrollTrigger: {
+        //     trigger: "#motionPath",
+        //     start: "top 30%",
+        //     end: "bottom+=200px bottom",
+        //     scrub: 1,
+        //     markers: true
+        //   },
+        //   ease: "none",
+        //   drawSVG:0,
+        //   motionPath: {
+        //     path: "#motionPath",
+        //     align: "#motionPath",
+        //     alignOrigin: [0.5, 1],
+        //     autoRotate: 90
+        //   }
+        // });
+        gsap.defaults({
+            ease: "none"
+        });
+        const main = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#linesvg",
+                    scrub: true,
+                    start: "top center",
+                    end: "bottom bottom"
+                }
+            })
+            .from("#motionPath", {
+                drawSVG: 0,
+                duration: 4
+            }, 0)
+        // MotionPathHelper.create('#motionSVG');
     </script>
+
 </body>
 
 </html>
