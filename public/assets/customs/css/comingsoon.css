@@ -16,7 +16,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    /* z-index: 1; */
     opacity: 0.2;
 }
 #myForm{
@@ -45,7 +45,7 @@
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
-    /* -webkit-font-feature-settings: 'liga'; */
+
     -webkit-font-smoothing: antialiased;
 }
 
@@ -267,15 +267,13 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px 15px 15px 40px;
+    padding: 15vw;
     text-align: justify;
     margin: 20px 0;
 }
 
 section img {
     width: 70px;
-    padding: 10px;
-
     position: relative;
 }
 
@@ -548,4 +546,9 @@ color: aliceblue;
 .margin{
 margin-top: 30px;
 }
-
+.initials{
+    font-size: 10rem;
+    color: white;
+    line-height: 1;
+    font-weight: 600;
+}

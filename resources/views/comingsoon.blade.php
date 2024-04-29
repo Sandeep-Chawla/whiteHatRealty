@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="{{url('assets/libraries/css/bootstrap.min.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="{{url('assets/libraries/css/fonts.css')}}"
-        rel="stylesheet">
+    <link href="{{url('assets/libraries/css/fonts.css')}}" rel="stylesheet">
     <script src="{{url('assets/libraries/js/bootstrap.min.js')}}"></script>
     <link rel="stylesheet" href="{{url('assets/customs/css/style.css')}}">
     <script src="{{url('assets/libraries/js/jquery.js')}}"></script>
@@ -40,6 +39,7 @@
                 --text-size: 20px;
                 --border-size: 15px;
             }
+
             .glass {
                 margin: 1rem;
                 padding: 1rem 0;
@@ -269,7 +269,6 @@
             flex-direction: column;
             justify-content: center;
             padding: 15px 15px 15px 40px;
-            text-align: justify;
             margin: 20px 0;
         }
 
@@ -299,7 +298,7 @@
             transition: height 0.3s ease;
             overflow: hidden;
         }
-        
+
         .fixed-content img {
             display: block;
             text-align: center;
@@ -557,18 +556,22 @@
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.18);
         }
-        #coming{
-            position: relative;
+
+        #coming {
+            /* position: relative; */
             padding: 1rem 0;
         }
-        .bg-img{
+
+        .bg-img {
             display: none;
         }
+
         @media (min-width: 768px) {
-            .bg-img{
+            .bg-img {
                 display: block;
                 width: 100%;
             }
+
             .main-div {
                 flex-direction: column;
             }
@@ -579,13 +582,15 @@
                 width: 0;
                 height: auto !important;
                 background-color: #1b5577;
-            transition: width 0.5s ease;
+                transition: width 0.5s ease;
 
             }
-            .fixed-content div{
+
+            .fixed-content div {
                 width: 12.5vw;
             }
-            .fixed-content img{
+
+            .fixed-content img {
                 width: 12.5vw;
             }
 
@@ -605,21 +610,94 @@
 
             .content {
                 width: 50%;
-                font-size: 3rem;
+                font-size: 1.5rem;
                 line-height: 1;
             }
 
             section img {
-                width: 200px;
+                width: 120px;
             }
-            .glass{
+
+            .glass {
                 margin: 2rem 4rem;
-            padding: 3rem 0rem;
+                padding: 3rem 0rem;
             }
+
             #coming {
-            clip-path: polygon(0 0, 64% 0, 54% 100%, 0% 100%);
-            position: absolute;
+                clip-path: polygon(0 0, 64% 0, 54% 100%, 0% 100%);
+                position: absolute;
+            }
         }
+
+        #txt {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            font-family: sans-serif;
+            letter-spacing: 3.5px;
+            font-size: 3.5rem;
+            font-weight: 700;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 100px;
+            -webkit-transform-style: preserve-3d;
+            -webkit-perspective: 100px;
+        }
+
+        #txt>b {
+            box-shadow: 0 .4rem .3rem -.3rem #aaa;
+            color: #979c9f;
+            background: linear-gradient(#aaf, #acf, #afc);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform-origin: bottom;
+            /* transform:rotateX(-85deg); */
+            -webkit-transform-origin: bottom;
+            /* -webkit-transform:rotateX(-85deg); */
+            animation: getUp 7s;
+        }
+
+        #txt>b:nth-child(2) {
+            animation-delay: .25s;
+        }
+
+        #txt>b:nth-child(3) {
+            animation-delay: .5s;
+        }
+
+        #txt>b:nth-child(4) {
+            animation-delay: .75s;
+        }
+
+        #txt>b:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        #txt>b:nth-child(6) {
+            animation-delay: 1.25s;
+        }
+
+        #txt>b:nth-child(7) {
+            animation-delay: 1.5s;
+        }
+
+        #txt>b:nth-child(8) {
+            animation-delay: 1.75s;
+        }
+
+        @keyframes getUp {
+
+            0%,
+            10%,
+            50% {
+                transform: rotateX(-35deg);
+            }
+
+            100% {
+                transform: rotateX(0);
+            }
         }
     </style>
 </head>
@@ -635,20 +713,33 @@
                 <div class="side right"></div>
                 <div class="side front"></div>
             </div>
-            <div class="h1">Whitehat Realty</div>
+            <div class="txt" id="txt">
+                <b>W</b><b>H</b><b>I</b><b>T</b><b>E</b><b>H</b><b>A</b><b>T</b>
+            </div>
+            <!-- <div class="h1">Whitehat Realty</div> -->
         </div>
     </div>
     <div class="postLoader">
+    <section class="content">
+  <div class="container">
+    <svg id="linesvg" viewBox="0 0 1223 5300" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path id="motionPath" class="st0" d="M1214.96 100.157c-3.97 189.608-1.65 543.296 0 696.438C1223 1128.025 8 745.313 8 1211.441v581.005c0 467.962 1206.96 40.936 1206.96 480.612v482.018c0" stroke="#fe4139" stroke-width="15" />
+      
+    </svg>
+  </div>
+
+</section>
+<section></section>
         <div class="main-div">
-        <div id="particles_effect" class="particles-effect"></div>
+            <div id="particles_effect" class="particles-effect"></div>
             <div class="ripple-background">
                 <div class="circle medium shade2"></div>
                 <div class="circle large shade3"></div>
             </div>
             <div class="sections">
                 <section id="W">
-                    <div class="d-flex align-items-end ">
-                        <img src="{{url('assets/images/w1.png')}}">
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">W</span>
                         <span class="seven-headers">isdom:</span>
                     </div>
                     <div class="content">
@@ -661,10 +752,6 @@
                     </div>
                 </section>
                 <section id="H1">
-                    <div class="d-flex align-items-end ">
-                        <img src="{{url('assets/images/h1.png')}}">
-                        <span class="seven-headers">onesty:</span>
-                    </div>
                     <div class="content">
                         <p>
                             Transparency is our cornerstone in the real estate sphere. We believe in open dialogue and
@@ -673,10 +760,14 @@
                             transaction, fostering trust with our clients and partners.
                         </p>
                     </div>
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">H</span>
+                        <span class="seven-headers">onesty:</span>
+                    </div>
                 </section>
                 <section id="I">
-                    <div class="d-flex align-items-end ">
-                        <img src="{{url('assets/images/i1.png')}}">
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">I</span>
                         <span class="seven-headers">nnovation:</span>
                     </div>
                     <div class="content">
@@ -695,8 +786,8 @@
                     </div>
                 </section>
                 <section id="T1">
-                    <div class="d-flex align-items-end ">
-                        <img src="{{url('assets/images/t1.png')}}">
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">T</span>
                         <span class="seven-headers">eamwork:</span>
                     </div>
                     <div class="content">
@@ -710,8 +801,8 @@
                     </div>
                 </section>
                 <section id="E">
-                    <div class="d-flex align-items-end ">
-                        <img src="{{url('assets/images/e1.png')}}">
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">E</span>
                         <span class="seven-headers">xcellence:</span>
                     </div>
                     <div class="content">
@@ -725,8 +816,8 @@
                     </div>
                 </section>
                 <section id="H2">
-                    <div class="d-flex align-items-end ">
-                        <img src="{{url('assets/images/sign1.png')}}">
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">E</span>
                         <span class="seven-headers">umanity:</span>
                     </div>
                     <div class="content">
@@ -742,8 +833,8 @@
                     </div>
                 </section>
                 <section id="A">
-                    <div class="d-flex align-items-end ">
-                        <img src="{{url('assets/images/a1.png')}}">
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">A</span>
                         <span class="seven-headers">daptability:</span>
                     </div>
                     <div class="content">
@@ -759,8 +850,8 @@
                     </div>
                 </section>
                 <section id="T2">
-                    <div class="d-flex align-items-end ">
-                        <img src="{{url('assets/images/t1.png')}}">
+                    <div class="d-flex align-items-end customHeads ">
+                        <span class="initials">T</span>
                         <span class="seven-headers">rustworthiness:</span>
                     </div>
                     <div class="content">
@@ -786,7 +877,7 @@
                 <div><img src="{{url('assets/images/t1.png')}}"></div>
             </div>
         </div>
-        <section id="slider" class="d-grid align-items-center gap-3 overflow-scroll">
+        <!-- <section id="slider" class="d-grid align-items-center gap-3 overflow-scroll">
             <div id="slideTrack" class="slide">
                 <div>
                     <iframe src="https://www.youtube.com/embed/NBcXxd5w7mU?si=1TKnWLjFQMMWFjnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -835,7 +926,7 @@
                     <iframe src="https://www.youtube.com/embed/u0mSrq_entE?si=2PE-USHaSV6Zm5Qx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="bg-light">
             <div class="container-fluid background3" style="height: auto;">
@@ -874,12 +965,11 @@
                             </div>
                             <div class="">
                                 <label for="mobile">
-                                <span class="material-symbols-outlined icon2">
-                                    call
-                                </span>
+                                    <span class="material-symbols-outlined icon2">
+                                        call
+                                    </span>
                                 </label>
-                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile"
-                                    name="mobile">
+                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile" name="mobile">
                             </div>
                             <div class="">
                                 <span class="material-symbols-outlined icon2">
@@ -890,9 +980,9 @@
                             <div class="margin">
                                 <textarea name="message" id="message" cols="5" rows="5" placeholder="Message" class="form-control"></textarea>
                             </div><br>
-                        <div>
-                        
-                        </div>
+                            <div>
+
+                            </div>
                             <button class="btnCustom">Submit</button>
                         </form>
 
