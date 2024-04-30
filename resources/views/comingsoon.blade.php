@@ -291,19 +291,19 @@
             position: sticky;
             right: 0;
             top: 0;
-            width: 20%;
             z-index: 2;
             max-width: 100%;
             height: 0vh;
             transition: height 0.3s ease;
             overflow: hidden;
+            max-width:100%;
         }
 
         .fixed-content img {
             display: block;
             text-align: center;
             width: 100%;
-            height: 12.5vh;
+            height: 9vh;
             padding: 10px;
         }
 
@@ -584,15 +584,16 @@
                 height: auto !important;
                 background-color: #1b5577;
                 transition: width 0.5s ease;
+                margin:auto;
 
             }
 
             .fixed-content div {
-                width: 12.5vw;
+                width: 9vw;
             }
 
             .fixed-content img {
-                width: 12.5vw;
+                width: 9vw;
             }
 
             .seven-headers {
@@ -712,14 +713,22 @@
             box-shadow: 0 0 10px rgba(0 0 0 / 20%);
             width: 100%;
             height: auto;
-            position: fixed;
+            opacity: 0;
+            background:#1b5577;
+            position: sticky;
+            top:0;
+            z-index:25
         }
 
         .nav img {
             margin: auto;
-            width: 1000px;
-            height: 300px;
-            object-fit: cover;
+            width: 320px;
+            height:100px;
+            object-fit:cover
+        }
+        #vision{
+            height:100vh;
+            width:100%;
         }
     </style>
 </head>
@@ -742,9 +751,7 @@
         </div>
     </div>
     <div class="postLoader">
-        <navbar class="nav">
-            <img src="{{url('assets/images/logo.png')}}" alt="" srcset="">
-        </navbar>
+        
         <section class="content">
             <div class="container">
                 <svg id="linesvg" viewBox="0 0 1223 5300" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -905,56 +912,19 @@
                 <div><img src="{{url('assets/images/t1.png')}}"></div>
             </div>
         </div>
-        <!-- <section id="slider" class="d-grid align-items-center gap-3 overflow-scroll">
-            <div id="slideTrack" class="slide">
-                <div>
-                    <iframe src="https://www.youtube.com/embed/NBcXxd5w7mU?si=1TKnWLjFQMMWFjnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <img class="img" src="https://images.unsplash.com/photo-1713184355726-d3a31d822fcc?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/rbg6pFERuWA?si=oXn55ZcYZudVUTK5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/xGSQRJ98nJA?si=pxBKzDiHLy5WgkEG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/mrReXTx2-_8?si=okpvSZJ0EMQgUzw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/rOdoIajoU5U?si=vEw2fd-_gxTJ7joO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/UjcRtdG3RiQ?si=WRltu0G0R8YLPzBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/DvCbI_DQ1P0?si=7FxTJ3h0gF83t25j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/u0mSrq_entE?si=vFgjSf5wE3jcuTQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/w8gr4KqqCyY?si=HPHSsUsHlTdgHGKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/SlTS4T5ZuAY?si=OwKaMHGVIJS1NgWl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/e6mWswP4fpk?si=dY_G9_FZr9ShNyB5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/Yq47X1eux8o?si=pVjACAhB4l7baSAx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/vvn74hPyoKA?si=3B2CsJ4Bknu_SI5G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/eXkZCJ31ylI?si=m0zYvpShlQC61JwC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <iframe src="https://www.youtube.com/embed/u0mSrq_entE?si=2PE-USHaSV6Zm5Qx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section> -->
+        <navbar class="nav">
+            <img src="{{url('assets/images/logo.png')}}" alt="" srcset="">
+        </navbar>
+        <section id="vision">
+        <div class="p-5">
+           <div class="container">
+           <h3>Our Vision</h3>
+        <p class="text-light">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+           </div>
+        </div>
+        </section>
 
         <section class="bg-light">
             <div class="container-fluid background3" style="height: auto;">
@@ -1064,29 +1034,10 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
     <script>
+
         var animation;
 
         gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin, ScrollTrigger);
-
-        // gsap.set("#motionSVG", { scale: 0.7, autoAlpha: 1 });
-
-        // animation = gsap.to("#motionSVG", {
-        //   scrollTrigger: {
-        //     trigger: "#motionPath",
-        //     start: "top 30%",
-        //     end: "bottom+=200px bottom",
-        //     scrub: 1,
-        //     markers: true
-        //   },
-        //   ease: "none",
-        //   drawSVG:0,
-        //   motionPath: {
-        //     path: "#motionPath",
-        //     align: "#motionPath",
-        //     alignOrigin: [0.5, 1],
-        //     autoRotate: 90
-        //   }
-        // });
         gsap.defaults({
             ease: "none"
         });
@@ -1102,7 +1053,17 @@
                 drawSVG: 0,
                 duration: 4
             }, 0)
-        // MotionPathHelper.create('#motionSVG');
+
+            gsap.to('.nav',{
+                scrollTrigger:{
+                    trigger:"#vision",
+                    // markers:true,
+                    scrub:true,
+                    start: "top center",
+                    end:"=+100px",
+                },
+                opacity:1,
+            })
     </script>
 
 </body>
