@@ -18,62 +18,15 @@ $(document).on("scroll", function () {
         }
     });
     var pageHeight = $(document).height() - $(window).height();
-    var progress = Math.ceil(100 * (pixels / pageHeight / 12.5) + 1) * 12.5;
+    var progress = Math.ceil(100 * (pixels / pageHeight / 12) + 1) * 9;
     if($(document).width()>768){
-                $(".fixed-content").css("width", progress + "vw");
+                $(".fixed-content").css("width", progress + "%");
             }
             else{
                 $(".fixed-content").css("height", progress + "vh");
             }
 });
 
-
-
-var slide = $(".slide");
-var currentPosition = 0;
-var animationDuration = 60000; // 40 seconds in milliseconds
-
-function startAnimation() {
-    slide.css({
-        "animation": "slide " + (animationDuration / 1000) + "s infinite",
-        "animation-play-state": "running"
-    });
-}
-
-function pauseAnimation() {
-    currentPosition = getCurrentPosition();
-    slide.css({
-        "animation-play-state": "paused"
-    });
-}
-
-function resumeAnimation() {
-    slide.css({
-        "animation": "slide " + (animationDuration / 1000) + "s infinite",
-        "animation-play-state": "running",
-        "animation-delay": "-" + (currentPosition / 360) + "s" // Adjust delay based on current position
-    });
-}
-
-function getCurrentPosition() {
-    var transformValue = slide.css("transform");
-    if (transformValue !== "none") {
-        var matrix = transformValue.match(/matrix.*\((.+)\)/)[1].split(', ');
-        return parseInt(matrix[4]); // Extract X translate value
-    } else {
-        return 0;
-    }
-}
-
-slide.on("mouseenter", function () {
-    pauseAnimation();
-});
-
-slide.on("mouseleave", function () {
-    resumeAnimation();
-});
-
-startAnimation();
 
 
 
