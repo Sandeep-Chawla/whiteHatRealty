@@ -34,6 +34,10 @@
         }
 
         @media (max-width: 768px) {
+            .sections section:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+
             :root {
                 --cube-size: 100px;
                 --text-size: 20px;
@@ -41,8 +45,8 @@
             }
 
             .glass {
-                margin: 1rem;
-                padding: 1rem 0;
+                padding: 4rem !important;
+                width: 100%;
             }
 
             .px-5 {
@@ -292,19 +296,17 @@
             right: 0;
             top: 0;
             z-index: 2;
-            max-width: 100%;
-            height: 0vh;
+            height: 100vh;
             transition: height 0.3s ease;
             overflow: hidden;
-            max-width:100%;
         }
 
         .fixed-content img {
             display: block;
             text-align: center;
-            width: 100%;
-            height: 9vh;
+            height: 12vh;
             padding: 10px;
+            transition: transform 0.5s;
         }
 
 
@@ -558,8 +560,8 @@
         }
 
         #coming {
-            /* position: relative; */
-            padding: 1rem 0;
+            position: relative;
+            padding: 1rem;
             top: 0;
         }
 
@@ -567,10 +569,28 @@
             display: none;
         }
 
+        .contents {
+            display: none;
+        }
+
         @media (min-width: 768px) {
+            .fixed-content img {
+                height: 9vh;
+            }
+
+            .sections section:nth-child(even) {
+                flex-direction: row;
+            }
+
+            .contents {
+                display: block;
+            }
+
             .bg-img {
                 display: block;
                 width: 100%;
+                position: absolute;
+                height: 100%;
             }
 
             .main-div {
@@ -580,24 +600,15 @@
             .fixed-content {
                 bottom: 0;
                 display: flex;
-                width: 0;
                 height: auto !important;
                 background-color: #1b5577;
                 transition: width 0.5s ease;
-                margin:auto;
+                margin: auto;
 
-            }
-
-            .fixed-content div {
-                width: 9vw;
-            }
-
-            .fixed-content img {
-                width: 9vw;
             }
 
             .seven-headers {
-                font-size: 3rem;
+                font-size: 2rem;
             }
 
             .sections {
@@ -623,11 +634,11 @@
             .glass {
                 margin: 2rem 4rem;
                 padding: 3rem 0rem;
+                width: 45%;
             }
 
             #coming {
                 clip-path: polygon(0 0, 64% 0, 54% 100%, 0% 100%);
-                position: absolute;
             }
         }
 
@@ -706,7 +717,8 @@
             width: 90%;
             position: absolute;
             margin: auto;
-            top: 30vh
+            top: 30vh;
+            left: 9vw;
         }
 
         .nav {
@@ -714,21 +726,25 @@
             width: 100%;
             height: auto;
             opacity: 0;
-            background:#1b5577;
+            background: #1b5577;
             position: sticky;
-            top:0;
-            z-index:25
+            top: 0;
+            z-index: 25
         }
 
         .nav img {
             margin: auto;
             width: 320px;
-            height:100px;
-            object-fit:cover
+            height: 100px;
+            object-fit: cover
         }
-        #vision{
-            height:100vh;
-            width:100%;
+
+        #vision {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -751,8 +767,8 @@
         </div>
     </div>
     <div class="postLoader">
-        
-        <section class="content">
+
+        <section class="contents">
             <div class="container">
                 <svg id="linesvg" viewBox="0 0 1223 5300" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     <path id="motionPath" class="st0" d="M214.587,133.47 C210.605,323.045 975.71,681.403 977.383,834.576 985.408,1165.939 151.8,1046.671 151.8,1512.836 151.8,1706.49 928.793,1989.615 928.793,2183.305 928.793,2651.256 160.137,2446.057 160.137,2885.769 160.137,3046.423 952.908,3411.76 952.908,3572.452 952.908,4057.827 163.366,3661.804 163.366,4224.795 163.366,4741.996 813.844,4387.092 813.844,4904.315" stroke="url('#gradient')" stroke-width="8" />
@@ -765,7 +781,6 @@
             </div>
 
         </section>
-        <section></section>
         <div class="main-div">
             <div id="particles_effect" class="particles-effect"></div>
             <div class="ripple-background">
@@ -902,28 +917,28 @@
             </div>
 
             <div class="fixed-content">
-                <div><img src="{{url('assets/images/w1.png')}}"></div>
-                <div><img src="{{url('assets/images/h1.png')}}"></div>
-                <div><img src="{{url('assets/images/i1.png')}}"></div>
-                <div><img src="{{url('assets/images/t1.png')}}"></div>
-                <div><img src="{{url('assets/images/e1.png')}}"></div>
-                <div><img src="{{url('assets/images/sign1.png')}}"></div>
-                <div><img src="{{url('assets/images/a1.png')}}"></div>
-                <div><img src="{{url('assets/images/t1.png')}}"></div>
+                <div><img src="{{url('assets/images/w-01.png')}}"></div>
+                <div><img src="{{url('assets/images/h-01.png')}}"></div>
+                <div><img src="{{url('assets/images/i-01.png')}}"></div>
+                <div><img src="{{url('assets/images/t-01.png')}}"></div>
+                <div><img src="{{url('assets/images/e-01.png')}}"></div>
+                <div><img src="{{url('assets/images/sign-01.png')}}"></div>
+                <div><img src="{{url('assets/images/a-01.png')}}"></div>
+                <div><img src="{{url('assets/images/t-01.png')}}"></div>
             </div>
         </div>
         <navbar class="nav">
             <img src="{{url('assets/images/logo.png')}}" alt="" srcset="">
         </navbar>
         <section id="vision">
-        <div class="p-5">
-           <div class="container">
-           <h3>Our Vision</h3>
-        <p class="text-light">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-           </div>
-        </div>
+            <div class="p-5">
+                <div class="container">
+                    <h3 class="text-light h1">Our Vision</h3>
+                    <p class="text-light">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+            </div>
         </section>
 
         <section class="bg-light">
@@ -991,7 +1006,7 @@
         <div class="position-relative ">
             <img class="bg-img" src="{{url('assets/images/coming.jpeg')}}" alt="" class="w-100 h-100 ">
             <div id="coming" class="top-0 w-100 h-100 bg-dark ">
-                <div class="col-sm-5 p-3 glass">
+                <div class="glass">
                     <div class="text-light h1 px-5">Our Website is coming soon</div>
                     <p class="text-light px-5">We are working hard to finish the development of this site. Contact Us to know more Details</p>
 
@@ -1025,6 +1040,48 @@
                 </div>
             </div>
         </div>
+        <div id="youtube">
+            <div class="slide2 f2">
+                <div>
+                    <h4>Included with Prime</h4>
+                    <h5>Mirzapur - Season 1</h5>
+                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <h4>2018</h4>
+                </div>
+            </div>
+            <div class="slide2 f2">
+                <div>
+                    <h4>Included with Prime</h4>
+                    <h5>Mirzapur - Season 1</h5>
+                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <h4>2018</h4>
+                </div>
+            </div>
+            <div class="slide2 f2">
+                <div>
+                    <h4>Included with Prime</h4>
+                    <h5>Mirzapur - Season 1</h5>
+                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <h4>2018</h4>
+                </div>
+            </div>
+            <div class="slide2 f2">
+                <div>
+                    <h4>Included with Prime</h4>
+                    <h5>Mirzapur - Season 1</h5>
+                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <h4>2018</h4>
+                </div>
+            </div>
+            <div class="slide2 f2">
+                <div>
+                    <h4>Included with Prime</h4>
+                    <h5>Mirzapur - Season 1</h5>
+                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <h4>2018</h4>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="{{url('assets/customs/js/comingsoon.js')}}">
     </script>
@@ -1034,7 +1091,6 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
     <script>
-
         var animation;
 
         gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin, ScrollTrigger);
@@ -1054,16 +1110,46 @@
                 duration: 4
             }, 0)
 
-            gsap.to('.nav',{
-                scrollTrigger:{
-                    trigger:"#vision",
-                    // markers:true,
-                    scrub:true,
-                    start: "top center",
-                    end:"=+100px",
-                },
-                opacity:1,
+        gsap.to('.nav', {
+            scrollTrigger: {
+                trigger: "#vision",
+                //  markers:true,
+                scrub: true,
+                start: "top +=200px",
+                end: "+=100px +=200px",
+            },
+            opacity: 1,
+        })
+        $(window).resize(function() {
+            ScrollTrigger.refresh();
+        })
+        if ($(document).width() < 768) {
+            const images = document.querySelectorAll('.fixed-content img');
+            $(".sections section").each(function(i) {
+                gsap.from(images[i], {
+                    scrollTrigger: {
+                        trigger: this,
+                        start: "center center",
+                        end: "center center",
+                        scrub: true
+                    },
+                    x: 100
+                })
             })
+        } else {
+            const images = document.querySelectorAll('.fixed-content img');
+            $(".sections section").each(function(i) {
+                gsap.from(images[i], {
+                    scrollTrigger: {
+                        trigger: this,
+                        start: "center center",
+                        end: "center center",
+                        scrub: true,
+                    },
+                    y: 100
+                })
+            })
+        }
     </script>
 
 </body>

@@ -2,30 +2,30 @@ $(window).on("load", function () {
     $('.preLoader').delay(100).fadeOut("slow");
 
 });
-$(document).on("scroll", function () {
-    var pixels = $(document).scrollTop();
-    var windowHeight = $(window).height();
+// $(document).on("scroll", function () {
+//     var pixels = $(document).scrollTop();
+//     var windowHeight = $(window).height();
 
-    $(".sections section").each(function () {
-        var sectionTop = $(this).offset().top;
-        var sectionHeight = $(this).outerHeight();
-        var sectionId = $(this).attr('id');
+//     $(".sections section").each(function () {
+//         var sectionTop = $(this).offset().top;
+//         var sectionHeight = $(this).outerHeight();
+//         var sectionId = $(this).attr('id');
 
-        if (pixels + windowHeight >= sectionTop && pixels <= sectionTop + sectionHeight) {
-            $('#' + sectionId + ' img').addClass('moveInRight');
-        } else {
-            $('#' + sectionId + ' img').removeClass('moveInRight');
-        }
-    });
-    var pageHeight = $(document).height() - $(window).height();
-    var progress = Math.ceil(100 * (pixels / pageHeight / 12) + 1) * 9;
-    if($(document).width()>768){
-                $(".fixed-content").css("width", progress + "%");
-            }
-            else{
-                $(".fixed-content").css("height", progress + "vh");
-            }
-});
+//         if (pixels + windowHeight >= sectionTop && pixels <= sectionTop + sectionHeight) {
+//             $('#' + sectionId + ' img').addClass('moveInRight');
+//         } else {
+//             $('#' + sectionId + ' img').removeClass('moveInRight');
+//         }
+//     });
+//     var pageHeight = $(document).height() - $(window).height();
+//     var progress = Math.ceil(100 * (pixels / pageHeight / 12.5) + 1) * 8;
+//     if($(document).width()>768){
+//                 $(".fixed-content").css("width", progress + "%");
+//             }
+//             else{
+//                 $(".fixed-content").css("height", progress + "vh");
+//             }
+// });
 
 
 

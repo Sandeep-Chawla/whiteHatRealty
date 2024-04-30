@@ -267,7 +267,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15vw;
+    padding: 10vw;
     text-align: justify;
     margin: 20px 0;
 }
@@ -286,25 +286,6 @@ section img {
 .main-div {
     display: flex;
     justify-content: space-between;
-}
-
-.fixed-content {
-    position: sticky;
-    right: 0;
-    top: 0;
-    width: 90vh;
-    z-index: 2;
-    height: 0vh;
-    transition: height 0.3s ease;
-    overflow: hidden;
-}
-
-.fixed-content img {
-    display: block;
-    text-align: center;
-    width: 100%;
-    height: 12.5vh;
-    padding: 10px;
 }
 
 
@@ -547,13 +528,68 @@ color: aliceblue;
 margin-top: 30px;
 }
 .initials{
-    font-size: 10rem;
+    font-size: 8rem;
     color: white;
     line-height: 1;
     font-weight: 600;
 }
 .customHeads{
-    background: #1b5577;
     position: relative;
     z-index: 2;
+}
+#youtube{
+    height: 100vh;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    margin: auto;
+    display: flex;
+    align-content: center;
+}
+.slide2{
+    position: relative;
+    margin: 20px;
+    z-index: 20;
+	margin-right:0.6vw;
+  width: 20%;
+  height: 10vw;
+  transition: transform 0.6s;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.f2{
+	background-image: url(https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/c1d6826d49bd0ce4797b718726245a18b70f36f371219edb0cfc4a7eff11b279._UR1920,1080_RI_SX356_FMwebp_.jpg);
+}
+.slide2 div{
+	display: none;
+  padding:60% 5% 0;
+}
+h5{
+	font-size: 1vw;
+	color: white;
+	margin: 0;
+	padding-top: 0.5vw;
+}
+h4{
+	font-size: 1vw;
+	color: grey;
+	margin: 0;
+	padding-top: 0.5vw;
+}
+p{
+	font-size: 0.8vw;
+	color: whitesmoke;
+	margin: 0;
+	padding-top: 0.3vw;
+}
+.slide2:hover{
+	transform: scale(1.1);
+	z-index: 21;
+}
+.slide2:hover > div{
+	display: block;
+}
+.slide2 div:hover{
+	box-shadow: 1px 1px 10px black,-1px -1px 10px black;
+	background-image: linear-gradient(180deg,#ffffff00,#ffffff00,#ffffff00,#1b2530,#1b2530,#1b2530,#1b2530,#1b2530);
 }
