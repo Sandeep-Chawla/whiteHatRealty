@@ -10,10 +10,10 @@
 <div class="loginPage">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <div class="card">
-                    <div class="card-header loginHeader">
-                        <p class="text-center">Admin Login</p>
+                    <div class="card-header loginHeader text-center">
+                        <img src="{{asset('storage/organizations/logo.png')}}" class="logo">
                     </div>
                     <div class="card-body loginBody">
                         <form action="{{route('login')}}" method="post">
