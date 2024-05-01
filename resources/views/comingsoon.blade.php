@@ -821,11 +821,13 @@
                     </div>
                 </section>
                 <section id="I">
+                
                     <div class="d-flex align-items-end customHeads ">
                         <span class="initials">I</span>
                         <span class="seven-headers">nnovation:</span>
                     </div>
                     <div class="content">
+                        
                         <p>
                             At the heart of our real estate philosophy lies innovation. We embrace cutting-edge
                             technologies
