@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\admin\YoutubeVideo;
 
 class DashboardController extends Controller
 {
@@ -13,7 +14,15 @@ class DashboardController extends Controller
     }
 
     public function comingSoon(){
-        $videos = YoutubeVideo::get();
-        return view('comingsoon',compact('videos'));
+        return view('comingsoon');
+    }
+
+    public function loadVideo(Request $request){
+        $videos = YoutubeVideo::paginate(3);
+        return response()->json([
+            'status' => true,
+            'data'   => $videos,
+            'message'=> 'Data loaded.'
+        ],200);
     }
 }

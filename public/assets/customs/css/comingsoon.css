@@ -608,3 +608,8 @@ p{
 	box-shadow: 1px 1px 10px black,-1px -1px 10px black;
 	background-image: linear-gradient(180deg,#ffffff00,#ffffff00,#ffffff00,#1b2530,#1b2530,#1b2530,#1b2530,#1b2530);
 }
+
+#loadMore{
+    position: relative;
+    z-index: 45;
+}

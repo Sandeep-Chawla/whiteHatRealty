@@ -767,7 +767,7 @@
             <div class="txt" id="txt">
                 <b>W</b><b>H</b><b>I</b><b>T</b><b>E</b><b>H</b><b>A</b><b>T</b>
             </div>
-            <!-- <div class="h1">Whitehat Realty</div> -->
+            <div class="h1">Whitehat Realty</div> 
         </div>
     </div>
     <div class="postLoader">
@@ -944,53 +944,13 @@
                 </div>
             </div>
         </section>
-        <div id="youtube">
-            <div class="slide2 f2">
-                <iframe src="https://www.youtube.com/embed/CBQnU2H8x3Y?si=7oWuluJur0Mau27A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div>
-                    <h4>Included with Prime</h4>
-                    <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
-                    <h4>2018</h4>
-                </div>
+        <section>
+            <div id="youtube"> 
             </div>
-            <div class="slide2 f3">
-                <iframe src="https://www.youtube.com/embed/Q0md_lMS47A?si=Aq3cgi-yJCQX9hXt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div>
-                    <h4>Included with Prime</h4>
-                    <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
-                    <h4>2018</h4>
-                </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-warning" id="loadMore" page_id="1">Load More</button>
             </div>
-            <div class="slide2 f4">
-                <iframe src="https://www.youtube.com/embed/N1tVDh6leQo?si=hx0hZinNUW5BtNja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div>
-                    <h4>Included with Prime</h4>
-                    <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
-                    <h4>2018</h4>
-                </div>
-            </div>
-            <div class="slide2 f5">
-                <iframe src="https://www.youtube.com/embed/OdvlNl_L-6U?si=i8hdWEWu4Rn66Z_x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div>
-                    <h4>Included with Prime</h4>
-                    <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
-                    <h4>2018</h4>
-                </div>
-            </div>
-            <div class="slide2 f6">
-                <iframe src="https://www.youtube.com/embed/CUy9e-cg-j0?si=NUF1du0rvDx3f0X2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div>
-                    <h4>Included with Prime</h4>
-                    <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
-                    <h4>2018</h4>
-                </div>
-            </div>
-        </div>
+        </section>
         <section class="bg-light">
             <div class="container-fluid background3" style="height: auto;">
                 <div class="row">
@@ -1159,6 +1119,33 @@
                 })
             })
         }
+
+        $(document).on('click','#loadMore',function(){
+            $(this).html('Loading....')
+            let page = parseInt($(this).attr('page_id'));
+            $.ajax({
+                url: '{{route("load-video")}}?page='+page,
+                method: 'GET',
+                success: function(data) {
+                    if(data.data.next_page_url == null){ $('#loadMore').remove()};
+                    page++;
+                    $("#loadMore").html('Load More')
+                    $("#loadMore").attr('page_id',page);
+                    $.each(data.data.data, function(index, data) {
+                        let html = `<div class="slide2 f2" style="background-image:url('storage/${data.thumbnail}')">
+                            <iframe src="${data.video_source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div>
+                                <h5>${data.title}</h5>
+                                <p>${data.description}</p>
+                                <h4>${data.created_at}</h4>
+                            </div>
+                        </div>`;
+                     $("#youtube").append(html)
+                    });
+                }
+            });
+        })
+        
     </script>
 
 </body>

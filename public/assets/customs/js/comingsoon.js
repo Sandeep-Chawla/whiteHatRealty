@@ -1,4 +1,5 @@
 $(window).on("load", function () {
+    $("#loadMore").click();
     $('.preLoader').delay(100).fadeOut("slow");
 
 });
