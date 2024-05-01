@@ -2,16 +2,13 @@
 <nav id="sidebar">
                <div class="sidebar_blog_1">
                   <div class="sidebar-header">
-                     <div class="logo_section">
-                        <a href="index.html"><img class="logo_icon img-responsive" src="images/logo/logo_icon.png" alt="#" /></a>
-                     </div>
                   </div>
                   <div class="sidebar_user_info">
                      <div class="icon_setting"></div>
                      <div class="user_profle_side">
-                        <div class="user_img"><img class="img-responsive" src="images/layout_img/user_img.jpg" alt="#" /></div>
+                        <div class="user_img"><img class="img-responsive" src="{{asset('storage/users/icon.png')}}" alt="#" /></div>
                         <div class="user_info">
-                           <h6>John David</h6>
+                           <h6>{{ucfirst(Auth::user()->name)}}</h6>
                            <p><span class="online_animation"></span> Online</p>
                         </div>
                      </div>
@@ -72,6 +69,7 @@
                            </li>
                         </ul>
                      </li>
+                     <li><a href="{{route('youtube-videos.index')}}"><i class="fa fa-map purple_color2"></i> <span>Youtube Videos</span></a></li>
                      <li><a href="map.html"><i class="fa fa-map purple_color2"></i> <span>Map</span></a></li>
                      <li><a href="charts.html"><i class="fa fa-bar-chart-o green_color"></i> <span>Charts</span></a></li>
                      <li><a href="settings.html"><i class="fa fa-cog yellow_color"></i> <span>Settings</span></a></li>

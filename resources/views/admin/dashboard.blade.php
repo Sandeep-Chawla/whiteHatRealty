@@ -7,58 +7,16 @@
 @endsection
 
 @section('content')
-<div class="container">
-    <p class="page-intro">
-        Dashboard
-    </p>
+<div class="container mt-3">
     <div class="row">
-        <div class="col-4 mb-4">
-            <div class="card card1">
-                <div class="card-body">
-                    <p>Total Users</p>
-                    <h4>24</h4>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-4 mb-4">
-            <div class="card card2">
-                <div class="card-body">
-                    <p>Total Users</p>
-                    <h4>24</h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 mb-4">
-            <div class="card card3">
-                <div class="card-body">
-                    <p>Total Users</p>
-                    <h4>24</h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 mb-4">
-            <div class="card card4">
-                <div class="card-body">
-                    <p>Total Users</p>
-                    <h4>24</h4>
-                </div>
+        <div class="col-md-12">
+            <div class="page_title">
+                <h2>Dashboard</h2>
             </div>
         </div>
     </div>
+    <div class="row">
 
-    <section>
-        <div class="row">
-            <div class="col-6"></div>
-            <div class="col-6"></div>
-        </div>
-    </section>
-    <section>
-        <div class="row">
-            <div class="col-12">
-                <p></p>
-            </div>
-        </div>
-    </section>
+    </div>
 </div>
 @endsection

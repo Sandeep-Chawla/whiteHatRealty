@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\admin\AuthController;
-use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\SendMailController;
+use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\YoutubeVideoController;
 
 Route::group(['prefix' => '7439','middleware' => ['admin','PreventBackPage']], function(){
 
@@ -23,6 +24,17 @@ Route::group(['prefix' => '7439','middleware' => ['admin','PreventBackPage']], f
 
         // POST METHODS
         
+    });
+
+    Route::group(['prefix' => 'youtube-videos'],function(){
+        // GET METHODS
+        Route::get('',[YoutubeVideoController::class,'index'])->name('youtube-videos.index');
+        Route::get('create',[YoutubeVideoController::class,'create'])->name('youtube-videos.create');;
+        Route::get('edit',[YoutubeVideoController::class,'edit'])->name('youtube-videos.edit');
+
+        // POST METHODS
+        Route::POST('store',[YoutubeVideoController::class,'store'])->name('youtube-videos.store');;
+        Route::POST('update',[YoutubeVideoController::class,'update'])->name('youtube-videos.update');
     });
 });
 

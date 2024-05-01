@@ -17,11 +17,11 @@
 }
 
 .loginBtn{
-    background: #f09d03;
+    background: #1b5577;
     color: #fff;
 }
 .loginBtn:hover{
-    background: #f09d03;
+    background: #1b5577;
     color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 5px 3px 8px;
     transition: 1s all;
@@ -52,10 +52,16 @@ form label{
 }
 
 .loginHeader{
-    background-color: #e6e6e694;
+    background-color: #1b5577;
 }
 
 .loginBody{
     background-color: #f1f0f094;
     padding: 30px;
+}
+
+.logo{
+    width: 50%;
+    margin: auto;
+
 }

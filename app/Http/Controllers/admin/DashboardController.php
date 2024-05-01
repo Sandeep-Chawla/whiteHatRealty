@@ -13,6 +13,7 @@ class DashboardController extends Controller
     }
 
     public function comingSoon(){
-        return view('comingsoon');
+        $videos = YoutubeVideo::get();
+        return view('comingsoon',compact('videos'));
     }
 }
