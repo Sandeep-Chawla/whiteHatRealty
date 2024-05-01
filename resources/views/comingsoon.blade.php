@@ -32,8 +32,48 @@
             --translateYRight: 0;
             --duration: 1.7s;
         }
-
-        @media (max-width: 768px) {
+        @media (max-width: 500px) {
+            .slide2{
+                width: 90%;
+                height: 40vw;
+            }
+            iframe{
+                height: 40vw;
+            }
+            #youtube{
+                justify-content: center;
+            }
+            .sections section{
+                width: 90%;
+                margin: auto;
+            }
+            .initials{
+                font-size: 5rem;
+            }
+            .seven-headers{
+                font-size: 1rem !important;
+            }
+            .glass{
+                width: 100%;
+            }
+            .sections section:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+            .fixed-content{
+                width: 0;
+            }
+        }
+        @media (min-width: 501px) and (max-width: 768px) {
+            .fixed-content{
+                width: 0;
+            }
+            .slide2{
+                width: 47%;
+                height: 20vw;
+            }
+            iframe{
+                height: 20vw;
+            }
             .sections section:nth-child(even) {
                 flex-direction: column-reverse;
             }
@@ -45,7 +85,7 @@
             }
 
             .glass {
-                padding: 4rem !important;
+                padding: 2rem !important;
                 width: 100%;
             }
 
@@ -109,7 +149,9 @@
         .moveInRight {
             animation: moveInRight 1s forwards;
         }
-
+        .content{
+            margin-top: 20px;
+        }
 
         .background {
             position: absolute;
@@ -264,7 +306,8 @@
         }
 
         .sections {
-            width: 80%;
+            width: 100%;
+            margin: auto;
         }
 
         .sections section {
@@ -272,7 +315,9 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin: 20px 0;
+            align-items: center;
+            text-align: justify;
+            margin-top: 10px !important;
         }
 
         section img {
@@ -557,11 +602,13 @@
             -webkit-backdrop-filter: blur(2.5px);
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 80%;
+            margin: auto;
         }
 
         #coming {
             position: relative;
-            padding: 1rem;
+            padding: 2vw 0;
             top: 0;
         }
 
@@ -579,7 +626,8 @@
             }
 
             .fixed-content img {
-                height: 9vh;
+                height: 5vw;
+                max-height: 5vw;
             }
 
             .sections section:nth-child(even) {
@@ -621,8 +669,11 @@
 
             .sections section {
                 flex-direction: row;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 align-items: center;
+                margin: auto;
+                width: 80%;
+                text-align: justify;
             }
 
             .content {
@@ -636,7 +687,7 @@
             }
 
             .glass {
-                margin: 2rem 4rem;
+                margin: 2rem 10vw;
                 padding: 3rem 0rem;
                 width: 45%;
             }
@@ -794,8 +845,7 @@
             <div class="sections">
                 <section id="W">
                     <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">W</span>
-                        <span class="seven-headers">isdom:</span>
+                        <span class="seven-headers"><span class="initials">W</span>isdom:</span>
                     </div>
                     <div class="content">
                         <p>
@@ -816,14 +866,12 @@
                         </p>
                     </div>
                     <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">H</span>
-                        <span class="seven-headers">onesty:</span>
+                        <span class="seven-headers"><span class="initials">H</span>onesty:</span>
                     </div>
                 </section>
                 <section id="I">
                     <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">I</span>
-                        <span class="seven-headers">nnovation:</span>
+                        <span class="seven-headers"><span class="initials">I</span>nnovation:</span>
                     </div>
                     <div class="content">
                         <p>
@@ -851,14 +899,12 @@
                         </p>
                     </div>
                     <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">T</span>
-                        <span class="seven-headers">eamwork:</span>
+                        <span class="seven-headers"><span class="initials">T</span>eamwork:</span>
                     </div>
                 </section>
                 <section id="E">
                     <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">E</span>
-                        <span class="seven-headers">xcellence:</span>
+                        <span class="seven-headers"><span class="initials">E</span>xcellence:</span>
                     </div>
                     <div class="content">
                         <p>
@@ -883,14 +929,12 @@
                         </p>
                     </div>
                     <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">H</span>
-                        <span class="seven-headers">umanity:</span>
+                        <span class="seven-headers"><span class="initials">H</span>umanity:</span>
                     </div>
                 </section>
                 <section id="A">
                     <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">A</span>
-                        <span class="seven-headers">daptability:</span>
+                        <span class="seven-headers"><span class="initials">A</span>daptability:</span>
                     </div>
                     <div class="content">
                         <p>
@@ -914,8 +958,7 @@
                         </p>
                     </div>
                     <div class="d-flex align-items-end customHeads ">
-                        <span class="initials">T</span>
-                        <span class="seven-headers">rustworthiness:</span>
+                        <span class="seven-headers"><span class="initials">T</span>rustworthiness:</span>
                     </div>
                 </section>
             </div>
@@ -935,7 +978,7 @@
             <img src="{{url('assets/images/logo.png')}}" alt="" srcset="">
         </navbar>
         <section id="vision">
-            <div class="p-5">
+            <div>
                 <div class="container">
                     <h3 class="text-light h1">Our Vision</h3>
                     <p class="text-light">
@@ -944,31 +987,43 @@
                 </div>
             </div>
         </section>
+        <!-- <section class="section">
+  <p>Scroll Down</p>
+</section>
+<section class="section-typing_text">
+  <h2 class="text">The aim of Whitehat Realty is to redefine the real estate experience by blending expertise with innovation, fostering trust, and prioritizing the human element in every transaction. We strive to provide exceptional service, exceed expectations, and make a positive impact in the real estate market</h2>
+  <h2 class="typing_text-heading">
+    <span class="typing_text"></span><span class="cursor">_</span>
+  </h2>
+</section>
+<section class="section">
+  <p>Scroll Up</p>
+</section> -->
         <div id="youtube">
             <div class="slide2 f2">
-                <iframe src="https://www.youtube.com/embed/CBQnU2H8x3Y?si=7oWuluJur0Mau27A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe id="player1" src="https://www.youtube.com/embed/CBQnU2H8x3Y?si=7oWuluJur0Mau27A&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div>
                     <h4>Included with Prime</h4>
                     <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <p class="youtubeDesc">The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
                     <h4>2018</h4>
                 </div>
             </div>
             <div class="slide2 f3">
-                <iframe src="https://www.youtube.com/embed/Q0md_lMS47A?si=Aq3cgi-yJCQX9hXt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe id="player2" src="https://www.youtube.com/embed/Q0md_lMS47A?si=Aq3cgi-yJCQX9hXt&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div>
                     <h4>Included with Prime</h4>
                     <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <p class="youtubeDesc">The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
                     <h4>2018</h4>
                 </div>
             </div>
             <div class="slide2 f4">
-                <iframe src="https://www.youtube.com/embed/N1tVDh6leQo?si=hx0hZinNUW5BtNja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe id="player3" src="https://www.youtube.com/embed/N1tVDh6leQo?si=hx0hZinNUW5BtNja&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div>
                     <h4>Included with Prime</h4>
                     <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <p class="youtubeDesc">The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
                     <h4>2018</h4>
                 </div>
             </div>
@@ -977,7 +1032,7 @@
                 <div>
                     <h4>Included with Prime</h4>
                     <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <p class="youtubeDesc">The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
                     <h4>2018</h4>
                 </div>
             </div>
@@ -986,7 +1041,7 @@
                 <div>
                     <h4>Included with Prime</h4>
                     <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <p class="youtubeDesc">The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
                     <h4>2018</h4>
                 </div>
             </div>
@@ -1053,71 +1108,35 @@
                 </div>
             </div>
         </section>
-        <div class="position-relative ">
-            <img class="bg-img" src="{{url('assets/images/coming.jpeg')}}" alt="" class="w-100 h-100 ">
-            <div id="coming" class="top-0 w-100 h-100 bg-dark ">
-                <div class="glass">
-                    <div class="text-light h1 px-5">Our Website is coming soon</div>
-                    <p class="text-light px-5">We are working hard to finish the development of this site. Contact Us to know more Details</p>
-
-
-                    <form class="p-1 px-5" action="" id="#myForm">
-                        <div class="">
-                            <span class="material-symbols-outlined icon2">
-                                person
-                            </span>
-                            <input type="name" class="form-control inputfield" id="name" placeholder="Name" name="name">
-
-                        </div>
-                        <div class="">
-                            <span class="material-symbols-outlined icon2">
-                                call
-                            </span>
-                            <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile" name="mobile">
-                        </div>
-                        <div class="">
-                            <span class="material-symbols-outlined icon2">
-                                mail
-                            </span>
-                            <input type="email" class="form-control inputfield" id="email" placeholder="Email ID" name="email">
-                        </div>
-                        <div class="margin">
-                            <textarea name="message" id="message" cols="85" rows="5" placeholder="Message" class="form-control"></textarea>
-                        </div><br>
-                        <button class="btnCustom">Submit</button>
-                    </form>
-
-                </div>
-            </div>
-        </div>
     </div>
     <script src="{{url('assets/customs/js/comingsoon.js')}}">
     </script>
     <script src="{{url('assets/libraries/js/gsap.min.js')}}"></script>
     <script src="{{url('assets/libraries/js/scrolltrigger.min.js')}}"></script>
     <script src="{{url('assets/libraries/js/motion.min.js')}}"></script>
-    <script src="{{url('assets/libraries/js/drawsvg.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <!-- <script src="{{url('assets/libraries/js/drawsvg.js')}}"></script> -->
     <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js"></script> -->
     <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script> -->
     <script>
         var animation;
 
-        gsap.registerPlugin( DrawSVGPlugin, ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger,TextPlugin);
         gsap.defaults({
             ease: "none"
         });
-        const main = gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#linesvg",
-                    scrub: true,
-                    start: "top center",
-                    end: "bottom bottom"
-                }
-            })
-            .from("#motionPath", {
-                drawSVG: 0,
-                duration: 4
-            }, 0)
+        // const main = gsap.timeline({
+        //         scrollTrigger: {
+        //             trigger: "#linesvg",
+        //             scrub: true,
+        //             start: "top center",
+        //             end: "bottom bottom"
+        //         }
+        //     })
+        //     .from("#motionPath", {
+        //         drawSVG: 0,
+        //         duration: 4
+        //     }, 0)
 
         gsap.to('.nav', {
             scrollTrigger: {
@@ -1140,7 +1159,8 @@
                         trigger: this,
                         start: "center center",
                         end: "center center",
-                        scrub: true
+                        scrub: true,
+                        // markers:true
                     },
                     x: 100
                 })
@@ -1154,13 +1174,74 @@
                         start: "center center",
                         end: "center center",
                         scrub: true,
+                        // markers:true
                     },
                     y: 100
                 })
             })
         }
     </script>
+<script>
+    (function() {
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+})();
+// Store references to the YouTube iframes
+var players = [];
 
+function onYouTubeIframeAPIReady() {
+  var player1 = new YT.Player('player1', {
+    events: {
+      'onStateChange': onPlayerStateChange
+    }
+  });
+  var player2 = new YT.Player('player2', {
+    events: {
+      'onStateChange': onPlayerStateChange
+    }
+  });
+  
+  players.push(player1);
+  players.push(player2);
+  // Add more players to the array as needed
+}
+
+
+
+function onPlayerStateChange(event) {
+  if (event.data === 1) { // 1 means the player is playing
+    pauseOtherPlayers(event.target);
+  }
+}
+
+function pauseOtherPlayers(currentPlayer) {
+  for (var i = 0; i < players.length; i++) {
+    if (players[i]!== currentPlayer) {
+      players[i].pauseVideo();
+    }
+  }
+}
+
+
+// let textElem = document.querySelector('.text')
+
+// gsap.to(".typing_text", {
+//   text: {
+//     value: textElem.innerText
+//   },
+//   scrollTrigger: {
+//     trigger: ".typing_text-heading",
+//     pin:".typing_text-heading",
+//     pinSpacing:false,
+//     start: "top center",
+//     end: "+=300px",
+//     scrub: true,
+//     markers: true
+//   }
+// });
+</script>
 </body>
 
 </html>
