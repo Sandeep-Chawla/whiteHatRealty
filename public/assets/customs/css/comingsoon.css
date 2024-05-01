@@ -432,12 +432,10 @@ section img {
 }
 
 iframe {
+    display: none;
     width: 100%;
+    height: 14vw;
     transition: transform 1s;
-}
-
-iframe:hover {
-    transform: translateZ(20px);
 }
 
 @keyframes slide {
@@ -538,31 +536,42 @@ margin-top: 30px;
     z-index: 2;
 }
 #youtube{
-    height: 100vh;
-    align-items: center;
+    width: 80vw;
+    margin: auto;
     flex-wrap: wrap;
-    justify-items: flex-start;
     margin: auto;
     display: flex;
-    align-content: center;
+    gap: 20px;
 }
 .slide2{
     position: relative;
-    margin: 20px;
     z-index: 20;
 	margin-right:0.6vw;
-  width: 20%;
-  height: 10vw;
+  width: 30%;
+  height: 15vw;
   transition: transform 0.6s;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .f2{
-	background-image: url(https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/c1d6826d49bd0ce4797b718726245a18b70f36f371219edb0cfc4a7eff11b279._UR1920,1080_RI_SX356_FMwebp_.jpg);
+	background-image: url(https://i.ytimg.com/vi/CBQnU2H8x3Y/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJ3TlvHqo6SmpCx5tovoTSHnGOoA);
 }
+.f3{
+	background-image: url(https://i.ytimg.com/vi/Q0md_lMS47A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2wc-NcjmfSLXtTux43OomOVR-tg);
+}
+.f4{
+	background-image: url(https://i.ytimg.com/vi/N1tVDh6leQo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoQCry5l05TFhDwbWkeAIqhopcAQ);
+}
+.f5{
+	background-image: url(https://i.ytimg.com/vi/OdvlNl_L-6U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqi0xEbbjwbEynf9CCtEwfud6vfQ);
+}
+.f6{
+	background-image: url(https://i.ytimg.com/vi/CUy9e-cg-j0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDMOT5Bmwp-dkI5rws7dv7D66C4iQ);
+}
+
 .slide2 div{
 	display: none;
-  padding:60% 5% 0;
+  padding:70% 5% 0;
 }
 h5{
 	font-size: 1vw;
@@ -588,6 +597,12 @@ p{
 }
 .slide2:hover > div{
 	display: block;
+    box-shadow: 1px 1px 10px black,-1px -1px 10px black;
+	background-image: linear-gradient(180deg,#ffffff00,#ffffff00,#ffffff00,#1b2530,#1b2530,#1b2530,#1b2530,#1b2530);
+}
+.slide2:hover > iframe{
+	position: absolute;
+    display: block;
 }
 .slide2 div:hover{
 	box-shadow: 1px 1px 10px black,-1px -1px 10px black;

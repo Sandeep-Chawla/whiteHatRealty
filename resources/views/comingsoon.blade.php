@@ -574,6 +574,10 @@
         }
 
         @media (min-width: 768px) {
+            .customHeads {
+                background: #1a5577;
+            }
+
             .fixed-content img {
                 height: 9vh;
             }
@@ -935,12 +939,58 @@
                 <div class="container">
                     <h3 class="text-light h1">Our Vision</h3>
                     <p class="text-light">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        The aim of Whitehat Realty is to redefine the real estate experience by blending expertise with innovation, fostering trust, and prioritizing the human element in every transaction. We strive to provide exceptional service, exceed expectations, and make a positive impact in the real estate market
                     </p>
                 </div>
             </div>
         </section>
-
+        <div id="youtube">
+            <div class="slide2 f2">
+                <iframe src="https://www.youtube.com/embed/CBQnU2H8x3Y?si=7oWuluJur0Mau27A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <h4>Included with Prime</h4>
+                    <h5>Mirzapur - Season 1</h5>
+                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <h4>2018</h4>
+                </div>
+            </div>
+            <div class="slide2 f3">
+                <iframe src="https://www.youtube.com/embed/Q0md_lMS47A?si=Aq3cgi-yJCQX9hXt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <h4>Included with Prime</h4>
+                    <h5>Mirzapur - Season 1</h5>
+                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <h4>2018</h4>
+                </div>
+            </div>
+            <div class="slide2 f4">
+                <iframe src="https://www.youtube.com/embed/N1tVDh6leQo?si=hx0hZinNUW5BtNja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <h4>Included with Prime</h4>
+                    <h5>Mirzapur - Season 1</h5>
+                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <h4>2018</h4>
+                </div>
+            </div>
+            <div class="slide2 f5">
+                <iframe src="https://www.youtube.com/embed/OdvlNl_L-6U?si=i8hdWEWu4Rn66Z_x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <h4>Included with Prime</h4>
+                    <h5>Mirzapur - Season 1</h5>
+                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <h4>2018</h4>
+                </div>
+            </div>
+            <div class="slide2 f6">
+                <iframe src="https://www.youtube.com/embed/CUy9e-cg-j0?si=NUF1du0rvDx3f0X2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <h4>Included with Prime</h4>
+                    <h5>Mirzapur - Season 1</h5>
+                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
+                    <h4>2018</h4>
+                </div>
+            </div>
+        </div>
         <section class="bg-light">
             <div class="container-fluid background3" style="height: auto;">
                 <div class="row">
@@ -1040,60 +1090,19 @@
                 </div>
             </div>
         </div>
-        <div id="youtube">
-            <div class="slide2 f2">
-                <div>
-                    <h4>Included with Prime</h4>
-                    <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
-                    <h4>2018</h4>
-                </div>
-            </div>
-            <div class="slide2 f2">
-                <div>
-                    <h4>Included with Prime</h4>
-                    <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
-                    <h4>2018</h4>
-                </div>
-            </div>
-            <div class="slide2 f2">
-                <div>
-                    <h4>Included with Prime</h4>
-                    <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
-                    <h4>2018</h4>
-                </div>
-            </div>
-            <div class="slide2 f2">
-                <div>
-                    <h4>Included with Prime</h4>
-                    <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
-                    <h4>2018</h4>
-                </div>
-            </div>
-            <div class="slide2 f2">
-                <div>
-                    <h4>Included with Prime</h4>
-                    <h5>Mirzapur - Season 1</h5>
-                    <p>The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an...</p>
-                    <h4>2018</h4>
-                </div>
-            </div>
-        </div>
     </div>
     <script src="{{url('assets/customs/js/comingsoon.js')}}">
     </script>
     <script src="{{url('assets/libraries/js/gsap.min.js')}}"></script>
     <script src="{{url('assets/libraries/js/scrolltrigger.min.js')}}"></script>
     <script src="{{url('assets/libraries/js/motion.min.js')}}"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
+    <script src="{{url('assets/libraries/js/drawsvg.js')}}"></script>
+    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js"></script> -->
+    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script> -->
     <script>
         var animation;
 
-        gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin, ScrollTrigger);
+        gsap.registerPlugin( DrawSVGPlugin, ScrollTrigger);
         gsap.defaults({
             ease: "none"
         });
