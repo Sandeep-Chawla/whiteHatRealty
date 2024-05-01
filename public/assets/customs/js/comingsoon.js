@@ -1,5 +1,10 @@
 $(window).on("load", function () {
-    $(".preLoader").delay(100).fadeOut("slow");
+
+    $("#loadMore").click();
+
+    
+    $('.preLoader').delay(100).fadeOut("slow");
+
 });
 $(window).scroll(function () {
     if ($(document).width() < 768) {
@@ -9,6 +14,7 @@ $(window).scroll(function () {
             $(".fixed-content").css("width", "0"); // Revert the width back to 100px
         }
     }
+
 });
 // $(document).on("scroll", function () {
 //     var pixels = $(document).scrollTop();
@@ -156,23 +162,6 @@ particlesJS(
         },
     }
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
