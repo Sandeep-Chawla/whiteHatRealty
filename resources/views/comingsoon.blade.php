@@ -32,48 +32,61 @@
             --translateYRight: 0;
             --duration: 1.7s;
         }
+
         @media (max-width: 500px) {
-            .slide2{
+            .slide2 {
                 width: 90%;
                 height: 40vw;
             }
-            iframe{
+
+            iframe {
                 height: 40vw;
             }
-            #youtube{
+
+            #youtube {
                 justify-content: center;
             }
-            .sections section{
+
+            .sections section {
                 width: 90%;
                 margin: auto;
             }
-            .initials{
+
+            .initials {
                 font-size: 5rem;
             }
-            .seven-headers{
+
+            .seven-headers {
                 font-size: 1rem !important;
             }
-            .glass{
+
+            .glass {
                 width: 100%;
             }
+
             .sections section:nth-child(even) {
                 flex-direction: column-reverse;
             }
-            .fixed-content{
+
+            .fixed-content {
                 width: 0;
             }
         }
+
         @media (min-width: 501px) and (max-width: 768px) {
-            .fixed-content{
+            .fixed-content {
                 width: 0;
             }
-            .slide2{
+
+            .slide2 {
                 width: 47%;
                 height: 20vw;
             }
-            iframe{
+
+            iframe {
                 height: 20vw;
             }
+
             .sections section:nth-child(even) {
                 flex-direction: column-reverse;
             }
@@ -149,7 +162,8 @@
         .moveInRight {
             animation: moveInRight 1s forwards;
         }
-        .content{
+
+        .content {
             margin-top: 20px;
         }
 
@@ -818,7 +832,7 @@
             <div class="txt" id="txt">
                 <b>W</b><b>H</b><b>I</b><b>T</b><b>E</b><b>H</b><b>A</b><b>T</b>
             </div>
-            <div class="h1">Whitehat Realty</div> 
+            <div class="h1">Whitehat Realty</div>
         </div>
     </div>
     <div class="postLoader">
@@ -870,12 +884,12 @@
                     </div>
                 </section>
                 <section id="I">
-                
+
                     <div class="d-flex align-items-end customHeads ">
                         <span class="seven-headers"><span class="initials">I</span>nnovation:</span>
                     </div>
                     <div class="content">
-                        
+
                         <p>
                             At the heart of our real estate philosophy lies innovation. We embrace cutting-edge
                             technologies
@@ -979,19 +993,14 @@
         <navbar class="nav">
             <img src="{{url('assets/images/logo.png')}}" alt="" srcset="">
         </navbar>
-        <section id="vision">
-            <div>
-                <div class="container">
-                    <h3 class="text-light h1">Our Vision</h3>
-                    <p class="text-light">
-                        The aim of Whitehat Realty is to redefine the real estate experience by blending expertise with innovation, fostering trust, and prioritizing the human element in every transaction. We strive to provide exceptional service, exceed expectations, and make a positive impact in the real estate market
-                    </p>
-                </div>
+        <section class="section-typing_text">
+            <div class="typing_text-heading">
+            <h3 class="text-light h1 text-center">Our Vision</h3>
+                <span class="typing_text"></span><span class="cursor">_</span>
             </div>
-        </section>
-
+    </section>
         <section>
-            <div id="youtube"> 
+            <div id="youtube">
             </div>
             <div class="text-center mt-5">
                 <button class="btn btn-warning" id="loadMore" page_id="1">Load More</button>
@@ -1073,7 +1082,7 @@
     <script>
         var animation;
 
-        gsap.registerPlugin(ScrollTrigger,TextPlugin);
+        gsap.registerPlugin(ScrollTrigger, TextPlugin);
         gsap.defaults({
             ease: "none"
         });
@@ -1092,7 +1101,7 @@
 
         gsap.to('.nav', {
             scrollTrigger: {
-                trigger: "#vision",
+                trigger: ".nav",
                 //  markers:true,
                 scrub: true,
                 start: "top +=200px",
@@ -1133,94 +1142,92 @@
             })
         }
 
-        $(document).on('click','#loadMore',function(){
+        $(document).on('click', '#loadMore', function() {
             $(this).html('Loading....')
             let page = parseInt($(this).attr('page_id'));
             $.ajax({
-                url: '{{route("load-video")}}?page='+page,
+                url: '{{route("load-video")}}?page=' + page,
                 method: 'GET',
                 success: function(data) {
-                    if(data.data.next_page_url == null){ $('#loadMore').remove()};
+                    if (data.data.next_page_url == null) {
+                        $('#loadMore').remove()
+                    };
                     page++;
                     $("#loadMore").html('Load More')
-                    $("#loadMore").attr('page_id',page);
+                    $("#loadMore").attr('page_id', page);
                     $.each(data.data.data, function(index, data) {
                         let html = `<div class="slide2 f2" style="background-image:url('storage/${data.thumbnail}')">
                             <iframe src="${data.video_source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div>
                                 <h5>${data.title}</h5>
-                                <p>${data.description}</p>
+                                <p class='text-light'>${data.description}</p>
                                 <h4>${data.created_at}</h4>
                             </div>
                         </div>`;
-                     $("#youtube").append(html)
+                        $("#youtube").append(html)
                     });
                 }
             });
         })
-        
     </script>
-<script>
-    (function() {
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-})();
-// Store references to the YouTube iframes
-var players = [];
+    <script>
+        (function() {
+            const tag = document.createElement('script');
+            tag.src = 'https://www.youtube.com/iframe_api';
+            const firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        })();
+        // Store references to the YouTube iframes
+        var players = [];
 
-function onYouTubeIframeAPIReady() {
-  var player1 = new YT.Player('player1', {
-    events: {
-      'onStateChange': onPlayerStateChange
-    }
-  });
-  var player2 = new YT.Player('player2', {
-    events: {
-      'onStateChange': onPlayerStateChange
-    }
-  });
-  
-  players.push(player1);
-  players.push(player2);
-  // Add more players to the array as needed
-}
+        function onYouTubeIframeAPIReady() {
+            var player1 = new YT.Player('player1', {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            var player2 = new YT.Player('player2', {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
 
-
-
-function onPlayerStateChange(event) {
-  if (event.data === 1) { // 1 means the player is playing
-    pauseOtherPlayers(event.target);
-  }
-}
-
-function pauseOtherPlayers(currentPlayer) {
-  for (var i = 0; i < players.length; i++) {
-    if (players[i]!== currentPlayer) {
-      players[i].pauseVideo();
-    }
-  }
-}
+            players.push(player1);
+            players.push(player2);
+            // Add more players to the array as needed
+        }
 
 
-// let textElem = document.querySelector('.text')
 
-// gsap.to(".typing_text", {
-//   text: {
-//     value: textElem.innerText
-//   },
-//   scrollTrigger: {
-//     trigger: ".typing_text-heading",
-//     pin:".typing_text-heading",
-//     pinSpacing:false,
-//     start: "top center",
-//     end: "+=300px",
-//     scrub: true,
-//     markers: true
-//   }
-// });
-</script>
+        function onPlayerStateChange(event) {
+            if (event.data === 1) { // 1 means the player is playing
+                pauseOtherPlayers(event.target);
+            }
+        }
+
+        function pauseOtherPlayers(currentPlayer) {
+            for (var i = 0; i < players.length; i++) {
+                if (players[i] !== currentPlayer) {
+                    players[i].pauseVideo();
+                }
+            }
+        }
+
+
+        gsap.to(".typing_text", {
+            text: {
+                value: 'The aim of Whitehat Realty is to redefine the real estate experience by blending expertise with innovation, fostering trust, and prioritizing the human element in every transaction. We strive to provide exceptional service, exceed expectations, and make a positive impact in the real estate market'
+            },
+            scrollTrigger: {
+                trigger: ".typing_text-heading",
+                pin: ".typing_text-heading",
+                start: "top center",
+                end: "center top",
+                scrub: true,
+                markers: true
+            }
+        });
+    </script>
 </body>
 
 </html>
