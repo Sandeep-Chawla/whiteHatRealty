@@ -14,8 +14,10 @@ class SendMailController extends Controller
             'mobile' => 'required|numeric',
             'email' => 'required|email'
         ]);
-        
         Mail::to($request->email)->send(new ContactMail($mailData));
+        $mailData['reciever'] = 'admin';
+        Mail::to('realtywhitehat@gmail.com')->send(new ContactMail($mailData));
+        return redirect()->route('coming-soon');
         // Mail::to('')->send(new ContactMail($mailData));
 
         

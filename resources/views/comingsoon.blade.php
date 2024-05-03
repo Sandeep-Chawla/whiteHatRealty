@@ -1109,7 +1109,7 @@
                                         <span class="material-symbols-outlined">person</span>
                                     </span>
                                 </div>
-                                <input type="text" class="form-control inputfield" id="name" placeholder="Enter Name" name="name" required>
+                                <input type="text" class="form-control inputfield @error('name') is-invalid @enderror" id="name" placeholder="Enter Name" name="name" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -1117,7 +1117,7 @@
                                         <span class="material-symbols-outlined">phone</span>
                                     </span>
                                 </div>
-                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile" name="mobile" required>
+                                <input type="text" class="form-control inputfield @error('mobile') is-invalid @enderror" id="mobile" placeholder="Mobile" name="mobile" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -1125,7 +1125,7 @@
                                         <span class="material-symbols-outlined">mail</span>
                                     </span>
                                 </div>
-                                <input type="email" class="form-control inputfield" id="email" placeholder="Email" name="email" required>
+                                <input type="email" class="form-control inputfield @error('email') is-invalid @enderror" id="email" placeholder="Email" name="email" required>
                             </div>
 
 

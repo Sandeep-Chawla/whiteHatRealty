@@ -35,8 +35,9 @@
         <div class="card-body">
             <img src="https://t3.ftcdn.net/jpg/05/30/96/04/360_F_530960431_c8fPd3HansYvrSJ4fJxZqp9OhjQmYoll.jpg" alt=""
                 width="100%" height="150px" srcset="">
-            <h3>Hello <span class="name">{{$mailData['name']}}</span></h3>
-            <p>
+                @if(@$mailData['reciever'] !== 'admin')
+                <p>
+                <h3>Hello <span class="name">{{$mailData['name']}}</span></h3>
                 Thank you for reaching out to us. Your inquiry has been successfully submitted, and we appreciate your
                 interest in our [product/service/company]. Our team is dedicated to providing exceptional customer
                 service and will get back to you as soon as possible.
@@ -46,6 +47,20 @@
                 <br>
                 White Hat Realty
             </p>
+            @else
+            <p>
+            <h3>Hello Admin</h3>
+                There is a query from {{$mailData['name']}} -<br>
+                
+                From - {{$mailData['email']}} / {{$mailData['mobile']}}<br>
+                Message- {{@$mailData['message']}}
+            </p>
+            <p>
+                Best regards,
+                <br>
+                White Hat Realty
+            </p>
+            @endif
         </div>
 
     </div>
