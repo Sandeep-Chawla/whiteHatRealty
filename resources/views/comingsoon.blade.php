@@ -71,13 +71,19 @@
             .fixed-content {
                 width: 0;
             }
+
+            .content p{
+                padding:20px;
+            }
         }
 
         @media (min-width: 501px) and (max-width: 768px) {
             .fixed-content {
                 width: 0;
             }
-
+            .content p{
+                padding:20px;
+            }
             .slide2 {
                 width: 47%;
                 height: 20vw;
@@ -692,8 +698,8 @@
 
             .content {
                 width: 50%;
-                font-size: 1.5rem;
-                line-height: 1;
+                font-size: 1.2rem;
+                line-height: 1.9rem;
             }
 
             section img {
@@ -814,6 +820,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        #W .content{
+            background: url("assets/images/w-01.png");
+            background-size:cover;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50% 50%;
+            height: auto;
+        }
+        #W p{
+            background-color: rgba(27, 85, 119,0.9);
+            width: 100%;
+            padding:50px;
         }
     </style>
 </head>
@@ -985,7 +1006,7 @@
                 <div><img src="{{url('assets/images/i-01.png')}}"></div>
                 <div><img src="{{url('assets/images/t-01.png')}}"></div>
                 <div><img src="{{url('assets/images/e-01.png')}}"></div>
-                <div><img src="{{url('assets/images/sign-01.png')}}"></div>
+                <div><img style="margin-top:3px" src="{{url('assets/images/sign-01.png')}}"></div>
                 <div><img src="{{url('assets/images/a-01.png')}}"></div>
                 <div><img src="{{url('assets/images/t-01.png')}}"></div>
             </div>
@@ -1223,8 +1244,7 @@
                 pin: ".typing_text-heading",
                 start: "top center",
                 end: "center top",
-                scrub: true,
-                markers: true
+                scrub: true
             }
         });
     </script>
