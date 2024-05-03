@@ -17,8 +17,7 @@
     <script src="{{url('assets/libraries/js/particles.js')}}"></script>
     <link rel="stylesheet" href="{{url('assets/customs/css/comingsoon.css')}}">
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 
     <style>
@@ -553,15 +552,16 @@
             border-left: 0;
         }
 
-        .form-control:focus,.inputfield:focus {
+        .form-control:focus,
+        .inputfield:focus {
             box-shadow: none;
             outline: none;
-            border:1px solid #ced4da;
+            border: 1px solid #ced4da;
             border-left: 0;
         }
 
-        .input-group:focus-within{
-            border-bottom: 2px solid #1b5577!important;
+        .input-group:focus-within {
+            border-bottom: 2px solid #1b5577 !important;
         }
 
         .background3 {
@@ -707,7 +707,10 @@
             .content {
                 width: 50%;
                 font-size: 1.2rem;
+                background-repeat: no-repeat;
+                background-position: center;
                 line-height: 1.9rem;
+                background-size: 80%;
             }
 
             section img {
@@ -829,18 +832,6 @@
             align-items: center;
             justify-content: center;
         }
-
-
-        #W .content {
-            background: url("assets/images/w-01.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 40%;
-        }
-
-
         .content p {
             background-color: rgb(37 101 139 / 70%);
             padding: 50px;
@@ -878,14 +869,8 @@
             border: 1px dashed #fff;
             top: -45vh;
             left: 100%;
-            display: block
-
-        #W p {
-            background-color: rgba(27, 85, 119, 0.9);
-            width: 100%;
-            padding: 50px;
+            display: block;
         }
-
         .fixing {
             position: fixed !important;
             background-color: transparent;
@@ -921,7 +906,7 @@
     </div>
     <div class="postLoader">
         <div class="main-div">
-            <!-- <div id="particles_effect" class="particles-effect"></div> -->
+            <div id="particles_effect" class="particles-effect"></div>
             <div class="ripple-background">
                 <div class="circle medium shade2"></div>
                 <div class="circle large shade3"></div>
@@ -1123,34 +1108,30 @@
                                     <span class="input-group-text bg-white">
                                         <span class="material-symbols-outlined">person</span>
                                     </span>
-                                  </div>
-                                  <input type="text" class="form-control inputfield" id="name" placeholder="Enter Name"
-                                  name="name" required>
+                                </div>
+                                <input type="text" class="form-control inputfield" id="name" placeholder="Enter Name" name="name" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-white">
                                         <span class="material-symbols-outlined">phone</span>
                                     </span>
-                                  </div>
-                                  <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile"
-                                  name="mobile" required>
+                                </div>
+                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile" name="mobile" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-white">
                                         <span class="material-symbols-outlined">mail</span>
                                     </span>
-                                  </div>
-                                  <input  type="email" class="form-control inputfield" id="email" placeholder="Email"
-                                  name="email" required>
+                                </div>
+                                <input type="email" class="form-control inputfield" id="email" placeholder="Email" name="email" required>
                             </div>
 
-                            
+
                             <div class="input-group mb-3">
                                 <label for="message"></label>
-                                <textarea name="message" id="message" rows="5" placeholder="Message"
-                                    class="form-control"></textarea>
+                                <textarea name="message" id="message" rows="5" placeholder="Message" class="form-control"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary form-control">Submit</button>
                         </form>
@@ -1178,7 +1159,7 @@
         })
         if ($(document).width() < 768) {
             const images = document.querySelectorAll('.fixed-content img');
-            $(".sections section").each(function (i) {
+            $(".sections section").each(function(i) {
                 gsap.from(images[i], {
                     scrollTrigger: {
                         trigger: this,
@@ -1191,7 +1172,7 @@
             })
         } else {
             const images = document.querySelectorAll('.fixed-content img');
-            $(".sections section").each(function (i) {
+            $(".sections section").each(function(i) {
                 gsap.from(images[i], {
                     scrollTrigger: {
                         trigger: this,
@@ -1204,20 +1185,20 @@
             })
         }
 
-        $(document).on('click', '#loadMore', function () {
+        $(document).on('click', '#loadMore', function() {
             $(this).html('Loading....')
             let page = parseInt($(this).attr('page_id'));
             $.ajax({
                 url: '{{route("load-video")}}?page=' + page,
                 method: 'GET',
-                success: function (data) {
+                success: function(data) {
                     if (data.data.next_page_url == null) {
                         $('#loadMore').remove()
                     };
                     page++;
                     $("#loadMore").html('Load More')
                     $("#loadMore").attr('page_id', page);
-                    $.each(data.data.data, function (index, data) {
+                    $.each(data.data.data, function(index, data) {
                         let html = `<div class="slide2 f2" style="background-image:url('storage/${data.thumbnail}')">
                             <iframe src="${data.video_source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div>
