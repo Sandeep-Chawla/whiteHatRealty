@@ -17,7 +17,8 @@
     <script src="{{url('assets/libraries/js/particles.js')}}"></script>
     <link rel="stylesheet" href="{{url('assets/customs/css/comingsoon.css')}}">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 
     <style>
@@ -542,12 +543,25 @@
 
         .icon2 {
             position: relative;
-            top: 37px;
-            left: 5px;
+            top: 45px;
+            left: 15px;
+            margin-bottom: -45px
         }
 
         .inputfield {
-            padding-left: 30px;
+            padding: 10px;
+            border-left: 0;
+        }
+
+        .form-control:focus,.inputfield:focus {
+            box-shadow: none;
+            outline: none;
+            border:1px solid #ced4da;
+            border-left: 0;
+        }
+
+        .input-group:focus-within{
+            border-bottom: 2px solid #1b5577!important;
         }
 
         .background3 {
@@ -816,15 +830,55 @@
             justify-content: center;
         }
 
+
         #W .content {
             background: url("assets/images/w-01.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 50% 50%;
-            height: auto;
+            background-size: 40%;
         }
+
+
+        .content p {
+            background-color: rgb(37 101 139 / 70%);
+            padding: 50px;
+            border-radius: 20px
+        }
+
+        .line {
+            position: relative;
+            top: 0;
+            height: 1px;
+            width: 90%;
+            left: 0;
+            border: 1px dashed #fff;
+            display: block
+        }
+
+        .line::before {
+            content: '';
+            width: 1px;
+            height: 45vh;
+            border: 1px dashed #fff;
+            top: -45vh;
+            position: relative;
+            right: 0;
+            transform: rotate(-180deg);
+            display: block
+        }
+
+        .line::after {
+            content: '';
+            position: relative;
+            width: 1px;
+            height: 45vh;
+            text-align: right;
+            border: 1px dashed #fff;
+            top: -45vh;
+            left: 100%;
+            display: block
 
         #W p {
             background-color: rgba(27, 85, 119, 0.9);
@@ -866,22 +920,8 @@
         <div class="down"><img src="{{url('assets/images/logo.png')}}" alt="" srcset=""></div>
     </div>
     <div class="postLoader">
-
-        <section class="contents">
-            <div class="container">
-                <svg id="linesvg" viewBox="0 0 1223 5300" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <path id="motionPath" class="st0" d="M214.587,133.47 C210.605,323.045 975.71,681.403 977.383,834.576 985.408,1165.939 151.8,1046.671 151.8,1512.836 151.8,1706.49 928.793,1989.615 928.793,2183.305 928.793,2651.256 160.137,2446.057 160.137,2885.769 160.137,3046.423 952.908,3411.76 952.908,3572.452 952.908,4057.827 163.366,3661.804 163.366,4224.795 163.366,4741.996 813.844,4387.092 813.844,4904.315" stroke="url('#gradient')" stroke-width="8" />
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#05a" />
-                        <stop offset="100%" stop-color="#0a5" />
-                    </linearGradient>
-                    <image id="motionSVG" class="card-img" href="https://theservtech.com/hodler-gallery/wp-content/uploads/2022/10/black1.png" height="70" width="70" x="-500" y="-500" />
-                </svg>
-            </div>
-
-        </section>
         <div class="main-div">
-            <div id="particles_effect" class="particles-effect"></div>
+            <!-- <div id="particles_effect" class="particles-effect"></div> -->
             <div class="ripple-background">
                 <div class="circle medium shade2"></div>
                 <div class="circle large shade3"></div>
@@ -891,7 +931,7 @@
                     <div class="d-flex align-items-end customHeads ">
                         <span class="seven-headers"><span class="initials">W</span>isdom:</span>
                     </div>
-                    <div class="content">
+                    <div class="content" style="background-image: url('assets/images/shadows/w-01.png')">
                         <p>
                             We navigate with wisdom, leveraging our knowledge and experience to steer through the twists
                             and
@@ -900,8 +940,11 @@
                         </p>
                     </div>
                 </section>
+                <div class="container">
+                    <span class="line"></span>
+                </div>
                 <section id="H1">
-                    <div class="content">
+                    <div class="content" style="background-image: url('assets/images/shadows/h-02.png')">
                         <p>
                             Transparency is our cornerstone in the real estate sphere. We believe in open dialogue and
                             integrity in
@@ -912,13 +955,17 @@
                     <div class="d-flex align-items-end customHeads ">
                         <span class="seven-headers"><span class="initials">H</span>onesty:</span>
                     </div>
+
                 </section>
+                <div class="container">
+                    <span class="line" style="transform: rotateX(180deg);"></span>
+                </div>
                 <section id="I">
 
                     <div class="d-flex align-items-end customHeads ">
                         <span class="seven-headers"><span class="initials">I</span>nnovation:</span>
                     </div>
-                    <div class="content">
+                    <div class="content" style="background-image: url('assets/images/shadows/i-02.png')">
 
                         <p>
                             At the heart of our real estate philosophy lies innovation. We embrace cutting-edge
@@ -934,8 +981,11 @@
 
                     </div>
                 </section>
+                <div class="container">
+                    <span class="line"></span>
+                </div>
                 <section id="T1">
-                    <div class="content">
+                    <div class="content" style="background-image: url('assets/images/shadows/t-02.png')">
                         <p>
                             Real estate is a team sport, and we thrive on collaboration.
                             Each member of our team brings a unique set of skills to the table, creating a tapestry of
@@ -948,11 +998,14 @@
                         <span class="seven-headers"><span class="initials">T</span>eamwork:</span>
                     </div>
                 </section>
+                <div class="container">
+                    <span class="line" style="transform: rotateX(180deg);"></span>
+                </div>
                 <section id="E">
                     <div class="d-flex align-items-end customHeads ">
                         <span class="seven-headers"><span class="initials">E</span>xcellence:</span>
                     </div>
-                    <div class="content">
+                    <div class="content" style="background-image: url('assets/images/shadows/e-02.png')">
                         <p>
                             We set the bar high and strive for excellence in every aspect of our business,
                             from impeccable client service to stellar property representation. It's not just about
@@ -962,8 +1015,11 @@
                         </p>
                     </div>
                 </section>
+                <div class="container">
+                    <span class="line"></span>
+                </div>
                 <section id="H2">
-                    <div class="content">
+                    <div class="content" style="background-image: url('assets/images/shadows/h-02.png')">
                         <p>
                             Beyond the bricks and mortar, real estate is about people.
                             We understand the emotional journey involved in property transactions and approach each
@@ -978,11 +1034,14 @@
                         <span class="seven-headers"><span class="initials">H</span>umanity:</span>
                     </div>
                 </section>
+                <div class="container">
+                    <span class="line" style="transform: rotateX(180deg);"></span>
+                </div>
                 <section id="A">
                     <div class="d-flex align-items-end customHeads ">
                         <span class="seven-headers"><span class="initials">A</span>daptability:</span>
                     </div>
-                    <div class="content">
+                    <div class="content" style="background-image: url('assets/images/shadows/a-01.png')">
                         <p>
                             In the ever-shifting landscape of real estate, adaptability is key.
                             We embrace change as an opportunity for growth, constantly evolving to meet the demands of
@@ -994,8 +1053,11 @@
 
                     </div>
                 </section>
+                <div class="container">
+                    <span class="line"></span>
+                </div>
                 <section id="T2">
-                    <div class="content">
+                    <div class="content" style="background-image: url('assets/images/shadows/t-02.png')">
                         <p>
                             In real estate, trust is everything.
                             We honor our commitments and uphold our promises,
@@ -1028,70 +1090,73 @@
         <section>
             <div id="youtube">
             </div>
-            <div class="text-center mt-5">
+            <div class="text-center m-5">
                 <button class="btn btn-warning" id="loadMore" page_id="1">Load More</button>
 
             </div>
         </section>
         <section class="bg-light">
-            <div class="container-fluid background3" style="height: auto;">
-                <div class="row">
-                    <div class="col-sm-6 p-5">
-                        <h2 class="text-light">Get In Touch</h2>
-                        <p class="text-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <div>
-                            <h4 class="text-light">Address</h4>
-                            <p class="text-light">Chandra Hieghts, Sector 107, Noida, Uttar Pradesh</p>
-                            <hr class="text-light">
-                        </div>
-                        <div>
-                            <h4 class="text-light">Phone</h4>
-                            <p class="text-light">(+91) 8081503903</p>
-                            <hr class="text-light">
-                        </div>
-                        <div>
-                            <h4 class="text-light">Email</h4>
-                            <p class="text-light">reshuverma@gmail.com</p>
-                            <hr class="text-light">
-                        </div>
+            <div class="contactSection">
+                <div class="locationSection">
+                    <div>
+                        <h3>Let's Chat</h3>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s,
+                        </p>
                     </div>
-                    <div class="col-sm-6 p-5">
-                        <h1 class="text-center text-light">Contact Us</h1>
-
-
-                        <form class="p-1 background3" action="{{route('contact-mail')}}" method="POST" id="myForm">
+                    <div class="d-flex align-items-center">
+                        <span class="material-symbols-outlined p-3">
+                            location_on
+                        </span>
+                        <p class="p-3">Chandra Hieghts, Sector 107, Noida, Uttar Pradesh</p>
+                    </div>
+                </div>
+                <div class="card formSection bg-light">
+                    <div class="card-body ">
+                        <form class="p-5" action="{{ route('contact-mail') }}" method="POST" id="myForm">
                             @csrf
-                            <div class="">
-                                <span class="material-symbols-outlined icon2">
-                                    person
-                                </span>
-                                <input type="name" class="form-control inputfield" id="name" placeholder="Name" name="name">
 
-                            </div>
-                            <div class="">
-                                <label for="mobile">
-                                    <span class="material-symbols-outlined icon2">
-                                        call
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white">
+                                        <span class="material-symbols-outlined">person</span>
                                     </span>
-                                </label>
-                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile" name="mobile">
+                                  </div>
+                                  <input type="text" class="form-control inputfield" id="name" placeholder="Enter Name"
+                                  name="name" required>
                             </div>
-                            <div class="">
-                                <span class="material-symbols-outlined icon2">
-                                    mail
-                                </span>
-                                <input type="email" class="form-control inputfield" id="email" placeholder="Email ID" name="email">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white">
+                                        <span class="material-symbols-outlined">phone</span>
+                                    </span>
+                                  </div>
+                                  <input type="text" class="form-control inputfield" id="mobile" placeholder="Mobile"
+                                  name="mobile" required>
                             </div>
-                            <div class="margin">
-                                <textarea name="message" id="message" cols="5" rows="5" placeholder="Message" class="form-control"></textarea>
-                            </div><br>
-                            <div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white">
+                                        <span class="material-symbols-outlined">mail</span>
+                                    </span>
+                                  </div>
+                                  <input  type="email" class="form-control inputfield" id="email" placeholder="Email"
+                                  name="email" required>
+                            </div>
 
+                            
+                            <div class="input-group mb-3">
+                                <label for="message"></label>
+                                <textarea name="message" id="message" rows="5" placeholder="Message"
+                                    class="form-control"></textarea>
                             </div>
-                            <button class="btnCustom">Submit</button>
+                            <button type="submit" class="btn btn-primary form-control">Submit</button>
                         </form>
 
                     </div>
+
                 </div>
             </div>
         </section>
@@ -1113,7 +1178,7 @@
         })
         if ($(document).width() < 768) {
             const images = document.querySelectorAll('.fixed-content img');
-            $(".sections section").each(function(i) {
+            $(".sections section").each(function (i) {
                 gsap.from(images[i], {
                     scrollTrigger: {
                         trigger: this,
@@ -1126,7 +1191,7 @@
             })
         } else {
             const images = document.querySelectorAll('.fixed-content img');
-            $(".sections section").each(function(i) {
+            $(".sections section").each(function (i) {
                 gsap.from(images[i], {
                     scrollTrigger: {
                         trigger: this,
@@ -1139,20 +1204,20 @@
             })
         }
 
-        $(document).on('click', '#loadMore', function() {
+        $(document).on('click', '#loadMore', function () {
             $(this).html('Loading....')
             let page = parseInt($(this).attr('page_id'));
             $.ajax({
                 url: '{{route("load-video")}}?page=' + page,
                 method: 'GET',
-                success: function(data) {
+                success: function (data) {
                     if (data.data.next_page_url == null) {
                         $('#loadMore').remove()
                     };
                     page++;
                     $("#loadMore").html('Load More')
                     $("#loadMore").attr('page_id', page);
-                    $.each(data.data.data, function(index, data) {
+                    $.each(data.data.data, function (index, data) {
                         let html = `<div class="slide2 f2" style="background-image:url('storage/${data.thumbnail}')">
                             <iframe src="${data.video_source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div>
@@ -1168,12 +1233,6 @@
         })
     </script>
     <script>
-        (function() {
-            const tag = document.createElement('script');
-            tag.src = 'https://www.youtube.com/iframe_api';
-            const firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        })();
         gsap.to(".typing_text", {
             text: {
                 value: 'The aim of Whitehat Realty is to redefine the real estate experience by blending expertise with innovation, fostering trust, and prioritizing the human element in every transaction. We strive to provide exceptional service, exceed expectations, and make a positive impact in the real estate market Be Ready !! As we unfold the mystery and history of the Indian Real Estate Market. Till then you can explore us through our YouTube Channel'

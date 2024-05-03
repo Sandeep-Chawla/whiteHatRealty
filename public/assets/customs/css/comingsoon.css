@@ -450,7 +450,7 @@ iframe {
 }
 
 .inputfield {
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
 .background3 {
@@ -596,7 +596,11 @@ h4{
 
 #loadMore{
     position: relative;
+    z-index: 24;
+}
+.slide2{
     z-index: 20;
+
 }
 .typing_text-heading {
     margin: 0;
@@ -644,6 +648,58 @@ h4{
   }
 
 
+
+  .displays{
+    padding: 45px 66px 66px 90px;
+    
+  }
+  
+  .custom3 div{
+    width: 50%;
+  }
+  
+  .contactSection{
+    display: flex;
+    padding: 50px;
+    margin: auto;
+    width: 100%;
+  }
+  
+
+.locationSection{
+    flex-grow: 1;
+    background-color: #1b5577;
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+  }
+
+  .locationSection div{
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #e3e3e3;
+    padding: 20px;
+    margin: 20px;
+    width: 50%;
+  }
+ 
+  .formSection{
+    width: 50%;
+  }
+
+
+    @media(max-width:768px) {
+      .contactSection{
+            width: 100%;
+          display: block;
+          padding: 50px;
+        }
+        .formSection,.locationSection{
+            width: 100%;
+        }
+    }
+
+ 
+
  .up{
     width: 100vw;
     position: relative;
@@ -685,3 +741,4 @@ h4{
     align-items: center;
     justify-content: center;
  }
+
