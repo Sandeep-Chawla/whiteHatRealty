@@ -34,6 +34,18 @@
         }
 
         @media (max-width: 500px) {
+            .fixing img {
+                height: 4vh !important;
+                width: 7vw;
+                padding: 0 !important;
+            }
+
+            .typing_text {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                width: 100%;
+            }
+
             .slide2 {
                 width: 90%;
                 height: 40vw;
@@ -72,8 +84,8 @@
                 width: 0;
             }
 
-            .content p{
-                padding:20px;
+            .content p {
+                padding: 20px;
             }
         }
 
@@ -81,9 +93,11 @@
             .fixed-content {
                 width: 0;
             }
-            .content p{
-                padding:20px;
+
+            .content p {
+                padding: 20px;
             }
+
             .slide2 {
                 width: 47%;
                 height: 20vw;
@@ -127,26 +141,6 @@
         *::before,
         *::after {
             box-sizing: border-box;
-        }
-
-        .preLoader {
-            color: white;
-            background-color: rgb(46, 45, 45);
-            position: fixed;
-            display: flex;
-            top: 0;
-            left: 0;
-            justify-content: center;
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-            padding: 100px 0 0;
-            font-family: "Space Grotesk", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            overflow: hidden;
-            z-index: 999;
         }
 
         .postLoader {
@@ -676,7 +670,7 @@
                 background-color: #1b5577;
                 transition: width 0.5s ease;
                 margin: auto;
-
+                background-position: center 50vh;
             }
 
             .seven-headers {
@@ -800,7 +794,7 @@
             box-shadow: 0 0 10px rgba(0 0 0 / 20%);
             width: 100%;
             height: auto;
-            opacity: 0;
+            opacity: 1;
             background: #1b5577;
             position: sticky;
             top: 0;
@@ -822,39 +816,54 @@
             justify-content: center;
         }
 
-        #W .content{
+        #W .content {
             background: url("assets/images/w-01.png");
-            background-size:cover;
-            background-position:center;
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             background-position: center;
             background-size: 50% 50%;
             height: auto;
         }
-        #W p{
-            background-color: rgba(27, 85, 119,0.9);
+
+        #W p {
+            background-color: rgba(27, 85, 119, 0.9);
             width: 100%;
-            padding:50px;
+            padding: 50px;
+        }
+
+        .fixing {
+            position: fixed !important;
+            background-color: transparent;
+            background-image: url(assets/images/coming-soon2.png);
+            margin: 0 auto;
+            left: 0;
+            height: 30vh !important;
+            transition: all 1s ease-in-out;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100% !important;
+            display: flex;
+            background-size: contain;
+            top: 10vh;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .coming-img {
+            position: sticky;
+            top: 38vh;
+            opacity: 0.3;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
     <div class="preLoader">
-        <div class="background"></div>
-        <div class="wrapper">
-            <div class="cube">
-                <div class="bottom"></div>
-                <div class="side back"></div>
-                <div class="side left"></div>
-                <div class="side right"></div>
-                <div class="side front"></div>
-            </div>
-            <div class="txt" id="txt">
-                <b>W</b><b>H</b><b>I</b><b>T</b><b>E</b><b>H</b><b>A</b><b>T</b>
-            </div>
-            <div class="h1">Whitehat Realty</div>
-        </div>
+        <div class="up"> <img src="{{url('assets/images/logo.png')}}" alt="" srcset=""></div>
+        <div class="down"><img src="{{url('assets/images/logo.png')}}" alt="" srcset=""></div>
     </div>
     <div class="postLoader">
 
@@ -1000,7 +1009,7 @@
                 </section>
             </div>
 
-            <div class="fixed-content">
+            <div class="fixed-content" id="fixed">
                 <div><img src="{{url('assets/images/w-01.png')}}"></div>
                 <div><img src="{{url('assets/images/h-01.png')}}"></div>
                 <div><img src="{{url('assets/images/i-01.png')}}"></div>
@@ -1011,15 +1020,11 @@
                 <div><img src="{{url('assets/images/t-01.png')}}"></div>
             </div>
         </div>
-        <navbar class="nav">
-            <img src="{{url('assets/images/logo.png')}}" alt="" srcset="">
-        </navbar>
         <section class="section-typing_text">
-            <div class="typing_text-heading">
-            <h3 class="text-light h1 text-center">Our Vision</h3>
+            <div class="typing_text-heading" id="typing">
                 <span class="typing_text"></span><span class="cursor">_</span>
             </div>
-    </section>
+        </section>
         <section>
             <div id="youtube">
             </div>
@@ -1095,11 +1100,7 @@
     </script>
     <script src="{{url('assets/libraries/js/gsap.min.js')}}"></script>
     <script src="{{url('assets/libraries/js/scrolltrigger.min.js')}}"></script>
-    <script src="{{url('assets/libraries/js/motion.min.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-    <!-- <script src="{{url('assets/libraries/js/drawsvg.js')}}"></script> -->
-    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js"></script> -->
-    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script> -->
     <script>
         var animation;
 
@@ -1107,29 +1108,6 @@
         gsap.defaults({
             ease: "none"
         });
-        // const main = gsap.timeline({
-        //         scrollTrigger: {
-        //             trigger: "#linesvg",
-        //             scrub: true,
-        //             start: "top center",
-        //             end: "bottom bottom"
-        //         }
-        //     })
-        //     .from("#motionPath", {
-        //         drawSVG: 0,
-        //         duration: 4
-        //     }, 0)
-
-        gsap.to('.nav', {
-            scrollTrigger: {
-                trigger: ".nav",
-                //  markers:true,
-                scrub: true,
-                start: "top +=200px",
-                end: "+=100px +=200px",
-            },
-            opacity: 1,
-        })
         $(window).resize(function() {
             ScrollTrigger.refresh();
         })
@@ -1142,7 +1120,6 @@
                         start: "center center",
                         end: "center center",
                         scrub: true,
-                        // markers:true
                     },
                     x: 100
                 })
@@ -1156,7 +1133,6 @@
                         start: "center center",
                         end: "center center",
                         scrub: true,
-                        // markers:true
                     },
                     y: 100
                 })
@@ -1198,53 +1174,32 @@
             const firstScriptTag = document.getElementsByTagName('script')[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         })();
-        // Store references to the YouTube iframes
-        var players = [];
-
-        function onYouTubeIframeAPIReady() {
-            var player1 = new YT.Player('player1', {
-                events: {
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-            var player2 = new YT.Player('player2', {
-                events: {
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-
-            players.push(player1);
-            players.push(player2);
-            // Add more players to the array as needed
-        }
-
-
-
-        function onPlayerStateChange(event) {
-            if (event.data === 1) { // 1 means the player is playing
-                pauseOtherPlayers(event.target);
-            }
-        }
-
-        function pauseOtherPlayers(currentPlayer) {
-            for (var i = 0; i < players.length; i++) {
-                if (players[i] !== currentPlayer) {
-                    players[i].pauseVideo();
-                }
-            }
-        }
-
-
         gsap.to(".typing_text", {
             text: {
-                value: 'The aim of Whitehat Realty is to redefine the real estate experience by blending expertise with innovation, fostering trust, and prioritizing the human element in every transaction. We strive to provide exceptional service, exceed expectations, and make a positive impact in the real estate market'
+                value: 'The aim of Whitehat Realty is to redefine the real estate experience by blending expertise with innovation, fostering trust, and prioritizing the human element in every transaction. We strive to provide exceptional service, exceed expectations, and make a positive impact in the real estate market Be Ready !! As we unfold the mystery and history of the Indian Real Estate Market. Till then you can explore us through our YouTube Channel'
             },
             scrollTrigger: {
                 trigger: ".typing_text-heading",
                 pin: ".typing_text-heading",
-                start: "top center",
-                end: "center top",
-                scrub: true
+                start: "top =+300px",
+                end: "bottom top",
+                scrub: true,
+                onEnter: function() {
+                    // When the trigger enters the viewport
+                    document.querySelector("#fixed").classList.add("fixing");
+                },
+                onEnterBack: function() {
+                    // When the trigger enters the viewport
+                    document.querySelector("#fixed").classList.add("fixing");
+                },
+                onLeaveBack: function() {
+                    // When the trigger leaves the viewport
+                    document.querySelector("#fixed").classList.remove("fixing");
+                },
+                onLeave: function() {
+                    // When the trigger leaves the viewport
+                    document.querySelector("#fixed").classList.remove("fixing");
+                }
             }
         });
     </script>

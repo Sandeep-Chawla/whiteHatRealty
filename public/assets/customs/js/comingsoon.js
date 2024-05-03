@@ -1,45 +1,29 @@
 $(window).on("load", function () {
-
     $("#loadMore").click();
-
-    
-    $('.preLoader').delay(100).fadeOut("slow");
+    gsap.to('.up',{
+        y:'-50vh',
+        duration:1,
+        delay:2
+    })
+    gsap.to('.down',{
+        y:'50vh',
+        duration:1,
+        delay:2
+    })
+    $('.preLoader').delay(3000).fadeOut("slow");
 
 });
 $(window).scroll(function () {
     if ($(document).width() < 768) {
         if ($(this).scrollTop() > 50) {
             $(".fixed-content").css("width", "auto"); // Change the width to 200px
+            $(".sections").css("width", "80%"); // Change the width to 200px
         } else {
             $(".fixed-content").css("width", "0"); // Revert the width back to 100px
         }
     }
 
 });
-// $(document).on("scroll", function () {
-//     var pixels = $(document).scrollTop();
-//     var windowHeight = $(window).height();
-
-//     $(".sections section").each(function () {
-//         var sectionTop = $(this).offset().top;
-//         var sectionHeight = $(this).outerHeight();
-//         var sectionId = $(this).attr('id');
-
-//         if (pixels + windowHeight >= sectionTop && pixels <= sectionTop + sectionHeight) {
-//             $('#' + sectionId + ' img').addClass('moveInRight');
-//         } else {
-//             $('#' + sectionId + ' img').removeClass('moveInRight');
-//         }
-//     });
-//     var pageHeight = $(document).height() - $(window).height();
-//     var progress = Math.ceil(100 * (pixels / pageHeight / 12.5) + 1) * 8;
-//     if($(document).width()>768){
-//                 $(".fixed-content").css("width", progress + "%");
-//             }
-//             else{
-//                 $(".fixed-content").css("height", progress + "vh");
-//             }
-// });
 
 //particle js query
 particlesJS(
@@ -162,6 +146,3 @@ particlesJS(
         },
     }
 );
-
-
-
