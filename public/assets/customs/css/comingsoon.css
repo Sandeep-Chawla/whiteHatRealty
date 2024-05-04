@@ -173,7 +173,20 @@ section img {
     top: 37px;
     left: 5px;
 }
+.form-control:focus,
+        .inputfield:focus {
+            box-shadow: none;
+            outline: none;
+            border: 2px solid #ced4da;
+        }
+        #message:focus{
+            border-left: 2px solid #ced4da;
 
+        }
+
+        .input-group:focus-within {
+            border-bottom: 2px solid #1b5577 !important;
+        }
 
 
 .background3 {
@@ -819,8 +832,7 @@ section img {
 }
 
 .inputfield {
-    padding: 10px;
-    border-left: 0;
+    padding: 10px;  
 }
 
 .form-control:focus,
@@ -1193,6 +1205,59 @@ section img {
     background: #1b5577 !important;
     padding: 12px;
 }
+.input-group span{
+    position: absolute;
+    top: 5px;
+    border: none;
+    z-index: 200!important;
+}
+.inputfield {
+    padding:10px 10px 10px 40px;
+}
+.input-group{
+    border-radius: 10px;
+}
+
+
+.bounce {
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-delay: 0.25s;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateX(0px);
+      timing-function: ease-in;
+    }
+    37% {
+      transform: translateX(5px);
+      timing-function: ease-out;
+    }
+    55% {
+      transform: translateX(-5px);
+      timing-function: ease-in;
+    }
+    73% {
+      transform: translateX(4px);
+      timing-function: ease-out;
+    }
+    82% {
+      transform: translateX(-4px);
+      timing-function: ease-in;
+    }
+    91% {
+      transform: translateX(2px);
+      timing-function: ease-out;
+    }
+    96% {
+      transform: translateX(-2px);
+      timing-function: ease-in;
+    }
+    100% {
+      transform: translateX(0px);
+      timing-function: ease-in;
+    }
+  }
 @media (max-width: 768px) {
     .line {
         display: none;
