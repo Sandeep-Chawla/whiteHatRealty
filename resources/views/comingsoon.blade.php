@@ -229,15 +229,13 @@
                             <p>
                                 Ready to find your dream home? Chat with WhiteHat Realty! Our friendly experts will guide you on your house hunting journey.
                             </p>
-
-
                             <div class="input-group mb-4">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-white">
                                         <span class="material-symbols-outlined">person</span>
                                     </span>
                                 </div>
-                                <input type="text" class="form-control inputfield @error('name') is-invalid @enderror" id="name" placeholder="Enter Full Name*" name="name" required>
+                                <input type="text" class="form-control inputfield" id="name" placeholder="Enter Full Name*" name="name" required>
                             </div>
                             <div class="input-group mb-4">
                                 <div class="input-group-prepend">
@@ -245,7 +243,7 @@
                                         <span class="material-symbols-outlined">phone</span>
                                     </span>
                                 </div>
-                                <input type="text" class="form-control inputfield @error('mobile') is-invalid @enderror" id="mobile" placeholder="Enter Mobile Number*" name="mobile" required>
+                                <input type="text" class="form-control inputfield" id="mobile" placeholder="Enter Mobile Number*" name="mobile" required>
                             </div>
                             <div class="input-group mb-4">
                                 <div class="input-group-prepend">
@@ -253,7 +251,7 @@
                                         <span class="material-symbols-outlined">mail</span>
                                     </span>
                                 </div>
-                                <input type="email" class="form-control inputfield @error('email') is-invalid @enderror" id="email" placeholder="Enter Email Address*" name="email" required>
+                                <input type="email" class="form-control inputfield" id="email" placeholder="Enter Email Address*" name="email" required>
                             </div>
 
 
@@ -261,7 +259,8 @@
                                 <label for="message"></label>
                                 <textarea name="message" id="message" rows="5" placeholder="Enter Message" class="form-control"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary form-control submitBtn">Submit</button>
+
+                            <button type="submit" class="btn btn-primary submitBtn" id="submitBtn">Send Message</button>
                         </form>
 
                     </div>
@@ -274,6 +273,7 @@
     </script>
     <script src="{{url('assets/libraries/js/gsap.min.js')}}"></script>
     <script src="{{url('assets/libraries/js/scrolltrigger.min.js')}}"></script>
+    <script src="{{url('assets/libraries/js/sweetalert.min.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script>
         var animation;
@@ -378,6 +378,45 @@
                 }
             }
         });
+
+        $("#submitBtn").on('click',function(e){
+            e.preventDefault();
+            $(this).html('Please Wait..');
+            $('.invalid-feedback').remove();
+            let formData = $('#myForm').serialize();
+            $.ajax({
+                url: '{{route("contact-mail")}}',
+                type: 'POST',
+                data: formData,
+                success: function(response){
+                    Swal.close();
+                    Swal.fire({
+                        title: "Good job!",
+                        text: response.message,
+                        icon: "success",
+                        backdrop:true
+                    });
+                    $('#submitBtn').html('Send Message');
+                    $('#myForm')[0].reset();
+                    
+                },
+                error: function(xhr, status, error){
+                    $('#submitBtn').html('Send Message');
+                    Swal.close();
+                    if(xhr.status === 422) {
+                    var errors = xhr.responseJSON.errors;
+                    $.each(errors, function(key, value){
+                        $('#'+key).addClass('is-invalid');
+                        var error = '<div class="invalid-feedback">'+value+'</div>';
+                        $('#'+key).closest('.input-group').append(error);
+                        $('.invalid-feedback').addClass('bounce');
+                    });
+                } else {
+                    console.error(error);
+                }
+                }
+            });
+        })
     </script>
 </body>
 

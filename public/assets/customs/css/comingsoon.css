@@ -174,9 +174,7 @@ section img {
     left: 5px;
 }
 
-.inputfield {
-    padding-left: 40px;
-}
+
 
 .background3 {
     background: #1a5577;
@@ -500,6 +498,7 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 @media (max-width: 500px) {
     .fixing img {
