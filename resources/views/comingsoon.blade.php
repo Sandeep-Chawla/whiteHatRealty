@@ -202,25 +202,33 @@
         </section>
         <section style="background:#e3e3e3">
             <div class="contactSection">
-                <div class="locationSection">
+                <div class="locationSection d-flex justify-content-center  flex-column ">
                     <div class="mb-5">
-                        <h3>Let's Chat</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s,
-                        </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.727647371316!2d77.37755177535519!3d28.54790487571097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef5539495d45%3A0x23d2d99e54374ec8!2sChandra%20Heights!5e0!3m2!1sen!2sin!4v1714811678373!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="d-flex align-items-center mb-3">
-                        <span class="material-symbols-outlined p-3">
-                            location_on
+                    <div class="d-flex flex-column mb-3">
+                        <span class="d-flex align-items-center ">
+                        <span class="gif">
+                            <img src="{{url('assets/images/location.gif')}}" alt="" srcset="">
+                        </span>    
+                            <span class="p-3 ml-5">Chandra Hieghts, Sector 107, Noida, Uttar Pradesh</span>
                         </span>
-                        <p class="p-3">Chandra Hieghts, Sector 107, Noida, Uttar Pradesh</p>
+                        <span class="d-flex align-items-center ">
+                        <span class="gif">
+                            <img src="{{url('assets/images/phone.gif')}}" alt="" srcset="">
+                        </span>   
+                            <span class="p-3 ml-5">+91 9873353353</span>
+                        </span>
                     </div>
                 </div>
                 <div class="card formSection bg-light">
                     <div class="card-body ">
                         <form class="p-5" action="{{ route('contact-mail') }}" method="POST" id="myForm">
                             @csrf
+                            <h3>Let's Chat!</h3>
+                            <p>
+                                Ready to find your dream home? Chat with WhiteHat Realty! Our friendly experts will guide you on your house hunting journey.
+                            </p>
                             <div class="input-group mb-4">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-white">
@@ -251,6 +259,7 @@
                                 <label for="message"></label>
                                 <textarea name="message" id="message" rows="5" placeholder="Enter Message" class="form-control"></textarea>
                             </div>
+
                             <button type="submit" class="btn btn-primary submitBtn" id="submitBtn">Send Message</button>
                         </form>
 
@@ -319,7 +328,7 @@
                     $("#loadMore").attr('page_id', page);
                     $.each(data.data.data, function(index, data) {
                         let html = `<div class="slide2 f2" style="background-image:url('storage/${data.thumbnail}')">
-                            <iframe src="${data.video_source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe class="iframe" src="${data.video_source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div>
                                 <h5>${data.title}</h5>
                                 <p class='text-light'>${data.description}</p>
@@ -335,7 +344,7 @@
     <script>
         gsap.to(".typing_text", {
             text: {
-                value: 'The aim of Whitehat Realty is to redefine the real estate experience by blending expertise with innovation, fostering trust, and prioritizing the human element in every transaction. We strive to provide exceptional service, exceed expectations, and make a positive impact in the real estate market Be Ready !! As we unfold the mystery and history of the Indian Real Estate Market. Till then you can explore us through our YouTube Channel'
+                value: "For us, it's not about transactions; it's about transformation. We believe in empowering every home buyer or seeker with knowledge and guidance, to enable them to make well informed decisions. Our commitment goes beyond profits; it's about making a profound impact on lives and their house hunting journey. Through our YouTube channel and upcoming innovative solutions,   we 're foreseeing a new era in real estate. Join us as we unravel the possibilities, because at WhiteHat Realty, the future isn't just a destination;it's a journey towards serving your real estate related needs better.Stay tuned for more updates, as the best of us is yet to come.In the meantime, explore our YouTube channel."
             },
             scrollTrigger: {
                 trigger: ".typing_text-heading",
