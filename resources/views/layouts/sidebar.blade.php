@@ -6,7 +6,7 @@
                   <div class="sidebar_user_info">
                      <div class="icon_setting"></div>
                      <div class="user_profle_side">
-                        <div class="user_img"><img class="img-responsive" src="{{asset('storage/users/icon.png')}}" alt="#" /></div>
+                        <div class="user_img"><img class="img-responsive" src="{{asset('public/storage/users/icon.png')}}" alt="#" /></div>
                         <div class="user_info">
                            <h6>{{ucfirst(Auth::user()->name)}}</h6>
                            <p><span class="online_animation"></span> Online</p>

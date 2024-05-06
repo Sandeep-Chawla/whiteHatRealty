@@ -3,7 +3,7 @@
 @section('title', $title)
 
 @section('customCss')
-<link rel="stylesheet" href="{{url('assets/customs/css/login.css')}}">
+<link rel="stylesheet" href="{{url('public/assets/customs/css/login.css')}}">
 @endsection
 
 @section('content')
@@ -13,7 +13,7 @@
             <div class="col-lg-5">
                 <div class="card">
                     <div class="card-header loginHeader text-center">
-                        <img src="{{asset('storage/organizations/logo.png')}}" class="logo">
+                        <img src="{{asset('public/storage/organizations/logo.png')}}" class="logo">
                     </div>
                     <div class="card-body loginBody">
                         <form action="{{route('login')}}" method="post">
@@ -57,5 +57,5 @@
 @endsection
 
 @section('customJs')
-<script src="{{url('assets/customs/js/login.js')}}"></script>
+<script src="{{url('public/assets/customs/js/login.js')}}"></script>
 @endsection

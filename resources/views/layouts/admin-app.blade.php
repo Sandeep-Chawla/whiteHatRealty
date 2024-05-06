@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'White Hat Realty')</title>
 
-    <link rel="stylesheet" href="{{url('assets/libraries/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{url('assets/customs/css/admin.css')}}">
+    <link rel="stylesheet" href="{{url('public/assets/libraries/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url('public/assets/customs/css/admin.css')}}">
     @yield('customCss')
 
 </head>
@@ -35,9 +35,9 @@
       </div>
       <!-- jQuery -->
       
-      <script src="{{url('assets/libraries/js/jquery.js')}}"></script>
-    <script src="{{url('assets/libraries/js/bootstrap.min.js')}}"></script>
-    <script src="{{url('assets/libraries/js/fontsawesome.js')}}"></script>
+      <script src="{{url('public/assets/libraries/js/jquery.js')}}"></script>
+    <script src="{{url('public/assets/libraries/js/bootstrap.min.js')}}"></script>
+    <script src="{{url('public/assets/libraries/js/fontsawesome.js')}}"></script>
    </body>
 
 </html>

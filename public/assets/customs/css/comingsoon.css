@@ -647,6 +647,8 @@ section img {
 .fixed-content {
     position: sticky;
     right: 0;
+    display:flex;
+    flex-direction:column;
     top: 0;
     z-index: 2;
     height: 100vh;
@@ -657,7 +659,7 @@ section img {
 .fixed-content img {
     display: block;
     text-align: center;
-    height: 12vh;
+    height: 11vh;
     padding: 20px 10px;
     transition: transform 0.5s;
 }
@@ -966,6 +968,7 @@ section img {
 
     .fixed-content {
         bottom: 0;
+        flex-direction:row;
         display: flex;
         height: auto !important;
         background-color: #1b5577;
@@ -1166,6 +1169,7 @@ section img {
     transition: all 1s ease-in-out;
     width: 100% !important;
     display: flex;
+    flex-direction:row;
     top: 10vh;
     align-items: center;
     justify-content: center;
@@ -1183,6 +1187,7 @@ section img {
 }
 .fixing3 {
     position: fixed !important;
+    flex-direction:row;
     margin: 0 auto;
     left: 0;
     height: 10vh !important;

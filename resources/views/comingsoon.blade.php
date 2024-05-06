@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'White Hat Realty')</title>
 
-    <link rel="stylesheet" href="{{url('assets/libraries/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url('public/assets/libraries/css/bootstrap.min.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="{{url('assets/libraries/css/fonts.css')}}" rel="stylesheet">
-    <script src="{{url('assets/libraries/js/bootstrap.min.js')}}"></script>
-    <link rel="stylesheet" href="{{url('assets/customs/css/style.css')}}">
-    <script src="{{url('assets/libraries/js/jquery.js')}}"></script>
-    <script src="{{url('assets/libraries/js/fontsawesome.js')}}"></script>
-    <script src="{{url('assets/libraries/js/particles.js')}}"></script>
-    <link rel="stylesheet" href="{{url('assets/customs/css/comingsoon.css')}}">
+    <link href="{{url('public/assets/libraries/css/fonts.css')}}" rel="stylesheet">
+    <script src="{{url('public/assets/libraries/js/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" href="{{url('public/assets/customs/css/style.css')}}">
+    <script src="{{url('public/assets/libraries/js/jquery.js')}}"></script>
+    <script src="{{url('public/assets/libraries/js/fontsawesome.js')}}"></script>
+    <script src="{{url('public/assets/libraries/js/particles.js')}}"></script>
+    <link rel="stylesheet" href="{{url('public/assets/customs/css/comingsoon.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
     <div class="preLoader">
-        <div class="up"> <img src="{{url('assets/images/logo.png')}}" alt="" srcset=""></div>
-        <div class="down"><img src="{{url('assets/images/logo.png')}}" alt="" srcset=""></div>
+        <div class="up"> <img src="{{url('public/assets/images/logo.png')}}" alt="" srcset=""></div>
+        <div class="down"><img src="{{url('public/assets/images/logo.png')}}" alt="" srcset=""></div>
     </div>
     <div class="postLoader">
         <div class="main-div">
@@ -36,7 +36,7 @@
                     <div class="d-flex align-items-end customHeads ">
                         <span class="seven-headers"><span class="initials">W</span>isdom:</span>
                     </div>
-                    <div class="content" style="background-image: url('assets/images/shadows/w-01.png')">
+                    <div class="content" style="background-image: url('public/assets/images/shadows/w-01.png')">
                         <p>
                             We navigate with wisdom, leveraging our knowledge and experience to steer through the twists
                             and
@@ -49,7 +49,7 @@
                     <span class="line"></span>
                 </div>
                 <section id="H1">
-                    <div class="content" style="background-image: url('assets/images/shadows/h-02.png')">
+                    <div class="content" style="background-image: url('public/assets/images/shadows/h-02.png')">
                         <p>
                             Transparency is our cornerstone in the real estate sphere. We believe in open dialogue and
                             integrity in
@@ -70,7 +70,7 @@
                     <div class="d-flex align-items-end customHeads ">
                         <span class="seven-headers"><span class="initials">I</span>nnovation:</span>
                     </div>
-                    <div class="content" style="background-image: url('assets/images/shadows/i-02.png')">
+                    <div class="content" style="background-image: url('public/assets/images/shadows/i-02.png')">
 
                         <p>
                             At the heart of our real estate philosophy lies innovation. We embrace cutting-edge
@@ -90,7 +90,7 @@
                     <span class="line"></span>
                 </div>
                 <section id="T1">
-                    <div class="content" style="background-image: url('assets/images/shadows/t-02.png')">
+                    <div class="content" style="background-image: url('public/assets/images/shadows/t-02.png')">
                         <p>
                             Real estate is a team sport, and we thrive on collaboration.
                             Each member of our team brings a unique set of skills to the table, creating a tapestry of
@@ -110,7 +110,7 @@
                     <div class="d-flex align-items-end customHeads ">
                         <span class="seven-headers"><span class="initials">E</span>xcellence:</span>
                     </div>
-                    <div class="content" style="background-image: url('assets/images/shadows/e-02.png')">
+                    <div class="content" style="background-image: url('public/assets/images/shadows/e-02.png')">
                         <p>
                             We set the bar high and strive for excellence in every aspect of our business,
                             from impeccable client service to stellar property representation. It's not just about
@@ -124,7 +124,7 @@
                     <span class="line"></span>
                 </div>
                 <section id="H2">
-                    <div class="content" style="background-image: url('assets/images/shadows/h-02.png')">
+                    <div class="content" style="background-image: url('public/assets/images/shadows/h-02.png')">
                         <p>
                             Beyond the bricks and mortar, real estate is about people.
                             We understand the emotional journey involved in property transactions and approach each
@@ -146,7 +146,7 @@
                     <div class="d-flex align-items-end customHeads ">
                         <span class="seven-headers"><span class="initials">A</span>daptability:</span>
                     </div>
-                    <div class="content" style="background-image: url('assets/images/shadows/a-01.png')">
+                    <div class="content" style="background-image: url('public/assets/images/shadows/a-01.png')">
                         <p>
                             In the ever-shifting landscape of real estate, adaptability is key.
                             We embrace change as an opportunity for growth, constantly evolving to meet the demands of
@@ -162,7 +162,7 @@
                     <span class="line"></span>
                 </div>
                 <section id="T2">
-                    <div class="content" style="background-image: url('assets/images/shadows/t-02.png')">
+                    <div class="content" style="background-image: url('public/assets/images/shadows/t-02.png')">
                         <p>
                             In real estate, trust is everything.
                             We honor our commitments and uphold our promises,
@@ -177,14 +177,14 @@
             </div>
 
             <div class="fixed-content" id="fixed">
-                <div><img src="{{url('assets/images/w-01.png')}}"></div>
-                <div><img src="{{url('assets/images/h-01.png')}}"></div>
-                <div><img src="{{url('assets/images/i-01.png')}}"></div>
-                <div><img src="{{url('assets/images/t-01.png')}}"></div>
-                <div><img src="{{url('assets/images/e-01.png')}}"></div>
-                <div><img style="margin-top:3px" src="{{url('assets/images/sign-01.png')}}"></div>
-                <div><img src="{{url('assets/images/a-01.png')}}"></div>
-                <div><img src="{{url('assets/images/t-01.png')}}"></div>
+                <div><img src="{{url('public/assets/images/w-01.png')}}"></div>
+                <div><img src="{{url('public/assets/images/h-01.png')}}"></div>
+                <div><img src="{{url('public/assets/images/i-01.png')}}"></div>
+                <div><img src="{{url('public/assets/images/t-01.png')}}"></div>
+                <div><img src="{{url('public/assets/images/e-01.png')}}"></div>
+                <div><img style="margin-top:3px" src="{{url('public/assets/images/sign-01.png')}}"></div>
+                <div><img src="{{url('public/assets/images/a-01.png')}}"></div>
+                <div><img src="{{url('public/assets/images/t-01.png')}}"></div>
             </div>
         </div>
         <section class="section-typing_text">
@@ -209,13 +209,13 @@
                     <div class="d-flex flex-column mb-3">
                         <span class="d-flex align-items-center ">
                         <span class="gif">
-                            <img src="{{url('assets/images/location.gif')}}" alt="" srcset="">
+                            <img src="{{url('public/assets/images/location.gif')}}" alt="" srcset="">
                         </span>    
                             <span class="p-3 ml-5">Chandra Hieghts, Sector 107, Noida, Uttar Pradesh</span>
                         </span>
                         <span class="d-flex align-items-center ">
                         <span class="gif">
-                            <img src="{{url('assets/images/phone.gif')}}" alt="" srcset="">
+                            <img src="{{url('public/assets/images/phone.gif')}}" alt="" srcset="">
                         </span>   
                             <span class="p-3 ml-5">+91 9873353353</span>
                         </span>
@@ -269,11 +269,11 @@
             </div>
         </section>
     </div>
-    <script src="{{url('assets/customs/js/comingsoon.js')}}">
+    <script src="{{url('public/assets/customs/js/comingsoon.js')}}">
     </script>
-    <script src="{{url('assets/libraries/js/gsap.min.js')}}"></script>
-    <script src="{{url('assets/libraries/js/scrolltrigger.min.js')}}"></script>
-    <script src="{{url('assets/libraries/js/sweetalert.min.js')}}"></script>
+    <script src="{{url('public/assets/libraries/js/gsap.min.js')}}"></script>
+    <script src="{{url('public/assets/libraries/js/scrolltrigger.min.js')}}"></script>
+    <script src="{{url('public/assets/libraries/js/sweetalert.min.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script>
         var animation;
@@ -351,7 +351,6 @@
                 pin: ".typing_text-heading",
                 start: "top =+320px",
                 end: "bottom top",
-                scrub: true,
                 anticipatePin: 1,
                 onEnter: function() {
                     // When the trigger enters the viewport
