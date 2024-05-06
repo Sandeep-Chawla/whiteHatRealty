@@ -327,7 +327,7 @@
                     $("#loadMore").html('Load More')
                     $("#loadMore").attr('page_id', page);
                     $.each(data.data.data, function(index, data) {
-                        let html = `<div class="slide2 f2" style="background-image:url('storage/${data.thumbnail}')">
+                        let html = `<div class="slide2 f2" style="background-image:url('public/storage/${data.thumbnail}')">
                             <iframe class="iframe" src="${data.video_source}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div>
                                 <h5>${data.title}</h5>
@@ -352,17 +352,18 @@
                 start: "top =+320px",
                 end: "bottom top",
                 scrub: true,
+                anticipatePin: 1,
                 onEnter: function() {
                     // When the trigger enters the viewport
+                    document.querySelector("#fixed").classList.remove("fixing3");
                     document.querySelector("#fixed").classList.add("fixing");
                     document.querySelector("#fixed").classList.add("fixing2");
-                    document.querySelector("#fixed").classList.remove("fixing3");
                 },
                 onEnterBack: function() {
                     // When the trigger enters the viewport
+                    document.querySelector("#fixed").classList.remove("fixing3");
                     document.querySelector("#fixed").classList.add("fixing");
                     document.querySelector("#fixed").classList.add("fixing2");
-                    document.querySelector("#fixed").classList.remove("fixing3");
                 },
                 onLeaveBack: function() {
                     // When the trigger leaves the viewport

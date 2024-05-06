@@ -39,6 +39,6 @@ Route::group(['prefix' => '7439','middleware' => ['admin','PreventBackPage']], f
 });
 
 
-Route::get('coming-soon',[DashboardController::class,'comingSoon'])->name('coming-soon');
+Route::get('/',[DashboardController::class,'comingSoon'])->name('coming-soon');
 Route::get('load-video',[DashboardController::class,'LoadVideo'])->name('load-video');
 Route::post('contact-mail',[SendMailController::class,'SendContactMail'])->name('contact-mail');
