@@ -4,7 +4,7 @@
       <div class="full">
          <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
          <div class="logo_section">
-            <a href="index.html"><img class="img-responsive" src="{{asset('public/storage/organizations/logo.png')}}" alt="#" /></a>
+            <a href="index.html"><img class="img-responsive" src="{{asset('storage/organizations/logo.png')}}" alt="#" /></a>
          </div>
          <div class="right_topbar">
             <div class="icon_info">
@@ -16,7 +16,7 @@
                <ul class="user_profile_dd">
                   <li>
                      <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle"
-                           src="{{asset('public/storage/users/icon.png')}}" alt="#" /><span
+                           src="{{asset('storage/users/icon.png')}}" alt="#" /><span
                            class="name_user">{{ucfirst(Auth::user()->name)}}</span></a>
                      <div class="dropdown-menu">
                         <a class="dropdown-item" href="profile.html">My Profile</a>

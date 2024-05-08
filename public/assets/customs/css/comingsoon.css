@@ -370,7 +370,8 @@ h4 {
     padding: 2rem;
     width: 100%;
     /* max-height: none !important; */
-    height: 70vh;
+    height: 100vh;
+    height: auto;
 }
 .typing_text {
     margin: auto;
@@ -434,7 +435,7 @@ h4 {
     margin: auto;
     width: 80%;
     transition: 0.4s all ease-in-out;
-    z-index: 45;
+    z-index: 22;
     position: relative;
     top: 0;
 }
@@ -460,6 +461,9 @@ h4 {
 }
 
 @media (max-width: 768px) {
+    .imgs{
+        padding:17px 10px;
+    }
     .contactSection {
         width: 100%;
         display: block;
@@ -507,7 +511,7 @@ h4 {
     width: 50vw;
     top: -60px;
 }
-.fixed-content div {
+#fixed div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -621,7 +625,7 @@ html {
 }
 
 .sections section {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -650,17 +654,20 @@ section img {
     display:flex;
     flex-direction:column;
     top: 0;
+    justify-content:center;
     z-index: 2;
     height: 100vh;
     transition: height 0.3s ease;
     overflow: hidden;
 }
-
-.fixed-content img {
+#fixed{
+    transition: all 0.3s ease;
+}
+#fixed img {
     display: block;
     text-align: center;
-    height: 11vh;
-    padding: 20px 10px;
+    height: 9vh;
+    padding: 15px 10px;
     transition: transform 0.5s;
 }
 
@@ -936,12 +943,18 @@ section img {
     display: none;
 }
 
+
 @media (min-width: 768px) {
+    .sign{
+        padding:12px 10px;
+    }
     .customHeads {
         background: #1a5577;
     }
-
-    .fixed-content img {
+    .typing_text-heading {
+        height: 70vh;
+    }
+    #fixed img {
         height: 5vw;
         max-height: 5vw;
         padding: 10px;
@@ -970,7 +983,7 @@ section img {
         bottom: 0;
         flex-direction:row;
         display: flex;
-        height: auto !important;
+        height: auto ;
         background-color: #1b5577;
         transition: width 0.5s ease;
         margin: auto;
@@ -1165,12 +1178,12 @@ section img {
     position: fixed !important;
     margin: 0 auto;
     left: 0;
-    height: 30vh !important;
+    height: 30vh;
     transition: all 1s ease-in-out;
     width: 100% !important;
     display: flex;
     flex-direction:row;
-    top: 10vh;
+    top: 0;
     align-items: center;
     justify-content: center;
 }
@@ -1180,7 +1193,7 @@ section img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
+    width: 80%;
     height: 100%;
     position: absolute;
     opacity: 0.3;
@@ -1286,6 +1299,10 @@ section img {
     .formSection form {
         padding: 1rem !important;
     }
+    
+    .sign{
+    padding:14px 10px !important;
+}
 }
 .gif {
     min-width: 40px;

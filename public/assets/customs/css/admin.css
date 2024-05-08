@@ -79,9 +79,9 @@
 
 html,
 body {
-    color: #898989;
+    color: #212529;
     font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Helvetica Neue",Arial,sans-serif;
     line-height: normal;
     font-weight: 300;
     overflow-x: hidden !important;
@@ -917,13 +917,13 @@ a[data-toggle="collapse"] {
     transition: ease all 0.3s;
     position: relative;
     padding: 60px 25px 25px 305px;
-    background: #eaeaea;
+    background: #f1f5f9;
 }
 
 .page_title {
     background: #fff;
-    margin-top: 20px;
-    padding: 25px 35px 22px 38px;
+    margin: 20px 0;
+    padding: 15px;
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
     position: relative;
     border-bottom: 1px solid #f3f3f3;
@@ -1349,9 +1349,10 @@ a[data-toggle="collapse"] {
 -------------------------------------------------------------------*/
 
 .table_format.strp table {
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 8px 8px;
     overflow: hidden;
-    color: #666;
+    color: #212529;
+    
 }
 
 .table_format.strp thead th {
@@ -1359,7 +1360,7 @@ a[data-toggle="collapse"] {
     border: none;
     color: #fff;
     vertical-align: middle;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: capitalize;
     line-height: 1;
     padding: 22px 40px;
@@ -3410,4 +3411,21 @@ table.projects tr td:first-child {
     height: 100%;
     min-height: 720px;
 }
+
+.middle_cont{
+    background:#f1f5f9;
+}
+
+.btn-secondary,.btn-secondary:focus{
+    background:#1e5577!important;
+    
+}
+
+#table_data_filter{
+    position:relative;
+    top:-30px;
+    margin-bottom:-30px;
+}
+
+
 

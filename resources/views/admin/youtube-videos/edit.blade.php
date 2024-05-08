@@ -22,7 +22,34 @@
             </div>
 
             <div class="card contentCard">
-            <h2>Hello</h2>
+            <div class="card-body">
+                <div class="col-md-6">
+                <form method="POST" action="{{route('youtube-videos.update')}}" enctype="multipart/form-data">
+                        @csrf
+                        <input name="id" value="{{request()->route('id')}}" type="hidden">
+                        <div class="form-group">
+                            <label for="thumbnail">Video Thumbnail:</label>
+                            <input type="file" class="form-control @error('thumbnail') is-invalid @enderror" name="thumbnail" placeholder="Thumbnail">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="source">Video Source:</label>
+                            <input type="text" class="form-control @error('video_source') is-invalid @enderror" value="{{$video->video_source}}" name="video_source" placeholder="Video Source">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title:</label>
+                            <input type="text" class="form-control @error('title') is-invalid @enderror" value="{{$video->title}}" name="title" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Video Description:</label>
+                            <textarea name="description" rows="5" id="" class="form-control @error('description') is-invalid @enderror">
+                                {{$video->description}}
+                            </textarea>
+                        </div><br>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
             </div>
         </div>
     </div>
